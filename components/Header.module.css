@@ -1,0 +1,29 @@
+.container {
+    padding: 24px 165px;
+}
+
+.header {
+    display: flex;
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.list {
+    padding: 0;
+    gap: 1em;
+    display: flex;
+    list-style: none;
+}
+
+.item {
+}
+
+.link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #33323d;
+}

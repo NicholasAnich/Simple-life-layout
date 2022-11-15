@@ -1,26 +1,43 @@
-html,
+:root {
+    --primary-font-color: #33323d;
+    --col: blue;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: "Public Sans" sans-serif;
+    color: var(--primary-font-color);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+p {
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-* {
-  box-sizing: border-box;
+h1,
+h2,
+h3 {
+    font-family: "Ibarra Real Nova";
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+h1 {
+    font-weight: 700;
+    font-size: 50px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 32px;
 }
