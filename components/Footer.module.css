@@ -1,15 +1,19 @@
+.container {
+    background-color: #33323d;
+    max-height: 354px;
+}
+
 .body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #33323d;
-    margin: 0;
+    justify-content: center;
+
     padding: 56px 0px;
-    min-height: 354px;
+    max-width: 1110px;
 }
 
 .logo {
-    /* margin-top: 56px; */
     margin-bottom: 2.5em;
 }
 
@@ -17,11 +21,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2em;
+
     padding: 0;
     margin: 0;
     margin-bottom: 40px;
-    gap: 2em;
-    display: flex;
+
     list-style: none;
 }
 
@@ -35,7 +40,51 @@
 
 .social {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
+
     padding: 0;
     margin: 0;
+}
+
+@media (min-width: 37.5em) {
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+
+        padding: 24px 0px;
+        max-height: 80px;
+    }
+    .body {
+        flex-direction: row;
+        flex-grow: 1;
+
+        max-width: 1110px;
+        margin: 0;
+        padding: 0 2.4375em;
+        /* Switch padding to margin? */
+    }
+
+    .logo {
+        margin: 0;
+        margin-right: 48px;
+    }
+
+    .list {
+        flex-direction: row;
+
+        margin: 0;
+    }
+
+    .social {
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 1000px) {
+    .list {
+        gap: 42px;
+    }
 }

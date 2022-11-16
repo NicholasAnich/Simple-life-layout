@@ -1,15 +1,12 @@
 .container {
-    /* width: 85%; */
     padding: 0 2em;
     margin: 0 auto;
-    /* max-width: 500px; */
     max-width: 1110px;
     min-height: 100vh;
 }
 
 @media (min-width: 600px) {
     .container {
-        /* max-width: 768px; */
         padding: 0 2.4375em;
     }
 }
