@@ -20,10 +20,9 @@
 .showMenu {
     display: flex;
     flex-direction: column;
-    gap: 32px;
     justify-content: center;
     align-items: center;
-    border: 1px solid magenta;
+    gap: 32px;
     padding: 0;
     position: absolute;
     top: 80px;
