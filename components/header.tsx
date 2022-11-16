@@ -13,25 +13,25 @@ export default function Header() {
         <div className={styles.container}>
             <header className={styles.header}>
                 <Image className={styles.img} src="/images/logo.svg" alt="Arrow Logo" width={60} height={32}></Image>
-                {/* <nav className={styles.nav}>
+                <nav className={styles.nav}>
                     <ul className={styles.list}>
                         <li className={styles.item}>
-                        <Link href="/" className={styles.link}>
-                        Home
-                        </Link>
+                            <Link href="/" className={styles.link}>
+                                Home
+                            </Link>
                         </li>
                         <li className={styles.item}>
-                        <Link href="/about" className={styles.link}>
+                            <Link href="/about" className={styles.link}>
                                 Portfolio
                             </Link>
-                            </li>
-                            <li className={styles.item}>
+                        </li>
+                        <li className={styles.item}>
                             <Link href="/contact" className={styles.link}>
-                            Contact Me
+                                Contact Me
                             </Link>
-                            </li>
-                            </ul>
-                </nav> */}
+                        </li>
+                    </ul>
+                </nav>
                 <button className={`${styles.menu} ${navbarOpen ? "close" : "open"}`} aria-controls="menu" onClick={handleToggle}>
                     {navbarOpen ? (
                         <Image src="/images/icons/close.svg" alt="close nav menu" width={18} height={19}></Image>

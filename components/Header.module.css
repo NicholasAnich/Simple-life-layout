@@ -1,6 +1,6 @@
 .container {
-    /* border: 1px solid blue; */
-    padding: 2em 0 2.5em 0;
+    padding: 0;
+    margin: 2em 0 2.5em 0;
 }
 
 .header {
@@ -15,20 +15,29 @@
 
 .nav {
     margin-left: auto;
+    display: none;
 }
+
+/*================= 
+    Burger Menu 
+===================*/
 
 .showMenu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 32px;
+    gap: 2em;
+
     padding: 0;
     position: absolute;
-    top: 80px;
-    right: 2em;
-    min-width: 233px;
-    min-height: 186px;
+
+    top: 5rem;
+    right: 2rem;
+
+    min-width: 14.5625rem;
+    min-height: 11.625rem;
+
     background-color: #33323d;
     color: white;
     list-style: none;
@@ -38,7 +47,7 @@
     padding: 0;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 0.75rem;
     letter-spacing: 2px;
     color: white;
 }
@@ -47,9 +56,14 @@
     display: none;
 }
 
+/*========================
+    Regular Nav & Items 
+  ========================*/
+
 .list {
     padding: 0;
     gap: 1em;
+    margin: 0;
     display: flex;
     list-style: none;
 }
@@ -66,8 +80,9 @@
     cursor: pointer;
     background: none;
     border: none;
-    /* border: 1px solid #000; */
 }
+
+/* Hiding & Revealing Nav Menus */
 
 .open {
     display: none;
@@ -77,8 +92,35 @@
     display: none;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 600px) {
     .container {
-        padding: 24px 165px;
+        margin: 4em 0 2.9375em 0;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .nav {
+        display: contents;
+    }
+
+    .showMenu {
+        display: none;
+    }
+
+    .menuNav {
+        display: none;
+    }
+
+    .list {
+        gap: 2.625em;
+    }
+}
+
+@media (min-width: 1000px) {
+    .container {
+        padding: 0;
+        margin: 4em 0px 3.375em 0px;
     }
 }
