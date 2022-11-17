@@ -19,7 +19,7 @@ export default function Footer() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/contact" className={footer.link}>
+                        <Link href="/portfolio" className={footer.link}>
                             Contact Me
                         </Link>
                     </li>

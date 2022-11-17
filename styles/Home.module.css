@@ -1,12 +1,98 @@
-.container {
-    padding: 0 2em;
-    margin: 0 auto;
-    max-width: 1110px;
-    min-height: 100vh;
+.main {
+    display: grid;
 }
 
+.heroImage {
+    display: block;
+
+    min-height: 275px;
+
+    max-width: auto;
+    max-height: 100%;
+
+    background-image: url("../public/images/homepage/mobile/image-homepage-hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.btnContainer {
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.flex_container {
+    display: flex;
+}
+
+/* Buttons */
+.btn {
+    display: flex;
+    align-items: center;
+    padding: 17px 0;
+    margin: 0;
+
+    /* min-width: 200px; */
+    /* height: 48px; */
+
+    font-family: inherit;
+
+    color: white;
+    background: #203a4c;
+
+    border: none;
+    cursor: pointer;
+}
+
+.btnImage {
+    /* opacity: 0.1; */
+    mix-blend-mode: normal;
+    /* display: block; */
+    /* border: 1px solid #000; */
+    /* width: 100%; */
+    padding: 0;
+    margin: 0;
+    padding: 18px 16px;
+    background-color: #33323d;
+}
+
+.btnArrows {
+    /* position: relative; */
+    /* margin: 0 17px; */
+    /* background-image: ; */
+    /* background-color: black; */
+    /* width: 48px; */
+    /* height: 48px; */
+    /* padding: 1.0625em 1em; */
+    /* z-index: -1; */
+    /* order: -2; */
+    /* display: block; */
+}
+
+.btnText {
+    margin: 0 auto;
+    padding: 0 3.25em;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+/* Mobile@2 */
+@media (min-width: 400px) {
+    .heroImage {
+        background-image: url("../public/images/homepage/mobile/image-homepage-hero@2x.jpg");
+    }
+}
+/* Tabelet */
 @media (min-width: 600px) {
-    .container {
-        padding: 0 2.4375em;
+    .heroImage {
+        min-height: 542px;
+        background-image: url("../public/images/homepage/tablet/image-homepage-hero.jpg");
+    }
+}
+
+@media (min-width: 1000px) {
+    .heroImage {
+        min-height: 600px;
+        background-image: url("../public/images/homepage/desktop/image-homepage-hero.jpg");
     }
 }
