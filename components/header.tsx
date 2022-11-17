@@ -21,7 +21,7 @@ export default function Header() {
                             </Link>
                         </li>
                         <li className={styles.item}>
-                            <Link href="/about" className={styles.link}>
+                            <Link href="/portfolio" className={styles.link}>
                                 Portfolio
                             </Link>
                         </li>
@@ -46,7 +46,7 @@ export default function Header() {
                         </Link>
                     </li>
                     <li className={styles.item}>
-                        <Link href="/about" className={styles.burgerItem}>
+                        <Link href="/portfolio" className={styles.burgerItem}>
                             Portfolio
                         </Link>
                     </li>
