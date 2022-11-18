@@ -15,19 +15,20 @@ export default function Home() {
                     <div className={styles.heroImage}></div>
                     <h1>Hey, I&apos;m Alex Spencer and I love building beautiful websites</h1>
                     <button className={styles.btnContainer}>
-                        <div className={styles.flex_container}>
-                            <div className={styles.btnImage}>
-                                <Image
-                                    className={styles.btnArrows}
-                                    src="/images/icons/down-arrows.svg"
-                                    alt="down arrow icon"
-                                    width={16}
-                                    height={15}
-                                ></Image>
-                            </div>
-                            <div className={styles.btn}>
+                        <div className={styles.grid_container}>
+                            <div className={styles.btnImage}></div>
+                            <div className={styles.btnImageDark}></div>
+                            <svg className={styles.btnArrows} xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+                                <g className={styles.stroke} fill="none" fill-rule="evenodd" stroke="#5FB4A2">
+                                    <path d="M0 9l8 4 8-4" />
+                                    <path opacity=".5" d="M0 5l8 4 8-4" />
+                                    <path opacity=".25" d="M0 1l8 4 8-4" />
+                                </g>
+                            </svg>
+
+                            <button className={styles.btn}>
                                 <p className={styles.btnText}>ABOUT ME</p>
-                            </div>
+                            </button>
                         </div>
                     </button>
                     <div className={styles.aboutMeSection}>

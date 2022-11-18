@@ -4,7 +4,7 @@ import Header from "./header";
 import styles from "./Layout.module.css";
 import other from "../styles/Home.module.css";
 
-export default function Layout({ children, home }: { children: React.ReactNode; home: boolean }) {
+export default function Layout({ children, home, contact }: { children: React.ReactNode; home: boolean; contact: boolean }) {
     return (
         <div>
             <div className={styles.container}>
