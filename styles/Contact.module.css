@@ -1,0 +1,29 @@
+.main {
+    min-height: 100vh;
+    /* display: grid; */
+    /* grid-template-rows: auto; */
+    display: flex;
+    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+.images {
+    display: block;
+    justify-self: center;
+    position: relative;
+    /* width: 500px; */
+    /* height: auto; */
+    max-height: 500px;
+}
+
+.picture {
+    /* position: relative; */
+    object-fit: contain;
+    border: 1px solid #000;
+    min-width: 271px;
+    min-height: 248px;
+    /* object-fit: fill; */
+    max-width: 540px;
+    max-height: 500px;
+}

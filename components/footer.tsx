@@ -14,12 +14,12 @@ export default function Footer() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/about" className={footer.link}>
+                        <Link href="/portfolio" className={footer.link}>
                             Portfolio
                         </Link>
                     </li>
                     <li>
-                        <Link href="/portfolio" className={footer.link}>
+                        <Link href="/contact" className={footer.link}>
                             Contact Me
                         </Link>
                     </li>

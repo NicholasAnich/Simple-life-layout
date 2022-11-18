@@ -4,6 +4,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import Layout from "../components/layout";
 
 export default function Portfolio() {
     return (
@@ -13,15 +14,11 @@ export default function Portfolio() {
                 <meta name="description" content="Minmalist Portfolio Project" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className={styles.container}>
-                <Header></Header>
-                <main className={styles.main}>
-                    <p>This is the portfolio page</p>
-
-                    <Link href="/">Back</Link>
-                </main>
-            </div>
-            <Footer></Footer>
+            {/* <div className={styles.container}> */}
+            <Layout home={false}>
+                <p>This is the portfolio page</p>
+                <Link href="/">Back</Link>
+            </Layout>
         </div>
     );
 }
