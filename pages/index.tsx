@@ -2,8 +2,7 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-// import Header from "../components/header";
-// import Footer from "../components/footer";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -31,6 +30,30 @@ export default function Home() {
                             </div>
                         </div>
                     </button>
+                    <div className={styles.aboutMeSection}>
+                        <div className={styles.author}>
+                            <img className={styles.authorImg} src="/images/homepage/mobile/image-homepage-profile.jpg" alt="Alex Spencer" />
+                        </div>
+                        <div className={styles.aboutMe}>
+                            <h2 className={styles.aboutTitle}>About Me</h2>
+                            <p className={styles.aboutBody}>
+                                I’m a junior front-end developer looking for a new role in an exciting company. I focus on writing accessible HTML,
+                                using modern CSS practices and writing clean JavaScript. When writing JavaScript code, I mostly use React, but I can
+                                adapt to whatever tools are required. I’m based in London, UK, but I’m happy working remotely and have experience in
+                                remote teams. When I’m not coding, you’ll find me outdoors. I love being out in nature whether that’s going for a
+                                walk, run or cycling. I’d love you to check out my work.
+                            </p>
+                            <Link className={styles.linkBtn} href={"/portfolio"}>
+                                GO TO PORTFOLIO
+                            </Link>
+                        </div>
+                        <div>
+                            <h2>Interested in doing a project together?</h2>
+                            <Link className={styles.linkBtn} href={"/contact"}>
+                                Contact Me
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </main>
         </Layout>
