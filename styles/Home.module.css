@@ -49,7 +49,7 @@
     display: block;
     width: 100%;
     height: 1px;
-    margin: 2em 0 0;
+    margin: 51px 0 0;
     background-color: #33323d;
     opacity: 0.15;
 }
@@ -60,6 +60,7 @@
 .aboutBody {
     line-height: 1.875;
     opacity: 0.8;
+    margin-bottom: 24px;
 }
 
 .btnContainer {
@@ -68,10 +69,14 @@
     padding: 0;
     cursor: pointer;
     margin-bottom: 96px;
+    background-color: #203a4c;
 }
 
-.flex_container {
-    display: flex;
+.grid_container {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 48px 152px;
+    grid-template-areas: "arrow button";
 }
 
 /* Buttons */
@@ -80,32 +85,80 @@
     align-items: center;
     padding: 17px 0;
     margin: 0;
-
+    grid-area: button;
     font-family: inherit;
 
     color: white;
-    background: #203a4c;
+    background-color: transparent;
 
     border: none;
     cursor: pointer;
 }
 
 .btnImage {
-    mix-blend-mode: normal;
     padding: 0;
     margin: 0;
     padding: 18px 16px;
-    background-color: #33323d;
+    grid-area: arrow;
+}
+.btnImageDark {
+    padding: 0;
+    margin: 0;
+    padding: 18px 16px;
+    background-color: #000;
+    opacity: 0.1;
+    grid-area: arrow;
+    order: 2;
 }
 
 .btnArrows {
+    grid-area: arrow;
+    align-self: center;
+    justify-self: center;
+    fill: none;
+    stroke-width: 1;
+}
+
+.btnArrows:hover {
 }
 
 .btnText {
     margin: 0 auto;
-    padding: 0 3.25em;
     font-size: 12px;
     letter-spacing: 2px;
+}
+
+.btnContainer:hover .stroke {
+    stroke: white;
+}
+
+.btnContainer:hover {
+    background-color: #5fb4a2;
+}
+
+.btnContainer:hover > svg:hover > .stroke {
+    stroke: white;
+    /* background-color: red; */
+}
+
+.linkBtn {
+    display: inline-block;
+    padding: 17px 32px;
+    font-size: 12px;
+    color: #33323d;
+    border: 1px solid #33323d;
+    opacity: 0.8;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.contactMe {
+    margin: 115px 0 80px;
+    text-align: center;
+}
+
+.contactTitle {
+    margin-bottom: 40px;
 }
 
 /* Mobile@2 */
