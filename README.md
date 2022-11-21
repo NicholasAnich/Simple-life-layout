@@ -42,6 +42,7 @@ Users should be able to:
 -   CSS custom properties
 -   Tailwind
 -   Flexbox
+-   Grid
 -   Mobile-first workflow
 
 ### What I learned
@@ -49,6 +50,16 @@ Users should be able to:
 NextJs will actually optimize your images for you with their Image component which uses browser native lazy loading.
 ![NextJs transforms jpg to webp](./public/images/screenshots/imageOptimization.png)
 The Image component will optimize images based on screen sizes as well!
+
+At one point I ended up getting a warning stating Hydration had failed.
+![Hydration Error](./public/images/screenshots/hydrationError.png)
+After looking through the error message I noticed that certain elements are not allowed to be nested.
+![Error Message](./public/images/screenshots/btnWarning.png)
+In this case it was a button element being nested inside another button element.
+Looking through my code I did see a button nested inside another button.
+![Nested Button](./public/images/screenshots/btnCodeError.png)
+I ended up changing the button element to a span and it fixed the problem right away! If you end up with a hydration error, read the error message and check for unwanted nesting of elements.
+![Issue Solved](./public/images/screenshots/btnIssueSolved.png)
 
 ### Continued development
 

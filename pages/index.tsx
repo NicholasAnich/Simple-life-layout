@@ -19,16 +19,16 @@ export default function Home() {
                             <div className={styles.btnImage}></div>
                             <div className={styles.btnImageDark}></div>
                             <svg className={styles.btnArrows} xmlns="http://www.w3.org/2000/svg" width="16" height="14">
-                                <g className={styles.stroke} fill="none" fill-rule="evenodd" stroke="#5FB4A2">
+                                <g className={styles.stroke} fill="none" fillRule="evenodd" stroke="#5FB4A2">
                                     <path d="M0 9l8 4 8-4" />
                                     <path opacity=".5" d="M0 5l8 4 8-4" />
                                     <path opacity=".25" d="M0 1l8 4 8-4" />
                                 </g>
                             </svg>
 
-                            <button className={styles.btn}>
+                            <span className={styles.btn}>
                                 <p className={styles.btnText}>ABOUT ME</p>
-                            </button>
+                            </span>
                         </div>
                     </button>
                     <div className={styles.aboutMeSection}>
