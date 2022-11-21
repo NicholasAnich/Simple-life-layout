@@ -15,10 +15,6 @@ export default function Portfolio() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             {/* <div className={styles.container}> */}
-            <Layout home={false}>
-                <p>This is the portfolio page</p>
-                <Link href="/">Back</Link>
-            </Layout>
         </div>
     );
 }

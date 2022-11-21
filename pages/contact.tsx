@@ -15,12 +15,14 @@ export default function Contact() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className={styles.container}>
-                <Header></Header>
-                <main className={contact.main}>
-                    <div className={contact.images}></div>
-                </main>
+                {/* <Header></Header> */}
+                <section className={contact.main}>
+                    <div className={contact.images}>
+                        <p>contact here</p>
+                    </div>
+                </section>
             </div>
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </div>
     );
 }

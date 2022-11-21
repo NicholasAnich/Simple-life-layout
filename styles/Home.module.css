@@ -64,6 +64,8 @@
 }
 
 .btnContainer {
+    display: inline-block;
+    text-decoration: none;
     border: none;
     margin: 0;
     padding: 0;
@@ -149,7 +151,15 @@
     border: 1px solid #33323d;
     opacity: 0.8;
     text-decoration: none;
+    text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.linkBtn:hover,
+.linkBtn:focus {
+    color: white;
+    background-color: #33323d;
+    opacity: 1;
 }
 
 .contactMe {

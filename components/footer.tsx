@@ -4,7 +4,7 @@ import footer from "./Footer.module.css";
 
 export default function Footer() {
     return (
-        <div className={footer.container}>
+        <footer className={footer.container}>
             <div className={footer.body}>
                 <Image className={footer.logo} src="/images/logo-light.svg" alt="Light Logo" width={60} height={32}></Image>
                 <ul className={footer.list}>
@@ -32,7 +32,8 @@ export default function Footer() {
                     </li>
                     <li>
                         <Link href="#">
-                            <Image src="/images/icons/twitter-light.svg" alt="twitter logo and link" width={24} height={19.5}></Image>
+                            <Image src="/images/icons/twitter-light.svg" alt="twitter logo and link" width={24} height={20}></Image>
+                            {/* <Image src="/images/icons/twitter-light.svg" alt="twitter logo and link" width={24} height={19.5}></Image> */}
                         </Link>
                     </li>
                     <li>
@@ -42,6 +43,6 @@ export default function Footer() {
                     </li>
                 </ul>
             </div>
-        </div>
+        </footer>
     );
 }
