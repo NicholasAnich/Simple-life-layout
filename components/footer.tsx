@@ -1,10 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import footer from "./Footer.module.css";
+import { Public_Sans } from "@next/font/google";
+
+const publicSans = Public_Sans({ subsets: ["latin"] });
 
 export default function Footer() {
     return (
-        <footer className={footer.container}>
+        <footer className={`${footer.container} ${publicSans.className}`}>
             <div className={footer.body}>
                 <Image className={footer.logo} src="/images/logo-light.svg" alt="Light Logo" width={60} height={32}></Image>
                 <ul className={footer.list}>

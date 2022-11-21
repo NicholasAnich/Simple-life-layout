@@ -49,6 +49,7 @@
     background-color: #33323d;
     color: white;
     list-style: none;
+    z-index: 1;
 }
 
 .burgerItem {

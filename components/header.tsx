@@ -1,7 +1,10 @@
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Public_Sans } from "@next/font/google";
 import styles from "./Header.module.css";
-import { useState } from "react";
+
+const publicSans = Public_Sans({ subsets: ["latin"] });
 
 export default function Header() {
     const [navbarOpen, setNavbarOpen] = useState(false);
@@ -10,7 +13,7 @@ export default function Header() {
         setNavbarOpen((prev) => !prev);
     };
     return (
-        <header className={styles.container}>
+        <header className={`${styles.container} ${publicSans.className}`}>
             <div className={styles.body}>
                 <Image className={styles.img} src="/images/logo.svg" alt="Arrow Logo" width={60} height={32}></Image>
                 <nav className={styles.nav}>

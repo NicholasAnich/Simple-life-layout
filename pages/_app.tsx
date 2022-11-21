@@ -4,9 +4,9 @@ import { Public_Sans } from "@next/font/google";
 import type { AppProps } from "next/app";
 
 const publicSans = Public_Sans({
-    subsets: ["latin"],
     weight: "400",
     variable: "--public-sans",
+    subsets: ["latin"],
 });
 
 export default function App({ Component, pageProps }: AppProps) {
