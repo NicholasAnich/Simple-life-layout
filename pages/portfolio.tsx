@@ -1,10 +1,5 @@
 // import React from "react";
-import Link from "next/link";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import Header from "../components/header";
-import Footer from "../components/footer";
-import Layout from "../components/layout";
 
 export default function Portfolio() {
     return (
