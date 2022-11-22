@@ -1,12 +1,12 @@
 import { useState } from "react";
+import { Public_Sans } from "@next/font/google";
 import Link from "next/link";
 import Image from "next/image";
-import { Public_Sans } from "@next/font/google";
-import styles from "./Header.module.css";
+import styles from "./NavBar.module.css";
 
 const publicSans = Public_Sans({ subsets: ["latin"] });
 
-export default function Header() {
+export default function Navbar() {
     const [navbarOpen, setNavbarOpen] = useState(false);
 
     const handleToggle = () => {
@@ -15,7 +15,9 @@ export default function Header() {
     return (
         <header className={`${styles.container} ${publicSans.className}`}>
             <div className={styles.body}>
-                <Image className={styles.img} src="/images/logo.svg" alt="Arrow Logo" width={60} height={32}></Image>
+                <Link href={"/"}>
+                    <Image className={styles.img} src="/images/logo.svg" alt="Arrow Logo" width={60} height={32}></Image>
+                </Link>
                 <nav className={styles.nav}>
                     <ul className={styles.list}>
                         <li className={styles.item}>

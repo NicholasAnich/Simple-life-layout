@@ -13,6 +13,20 @@
     max-width: 1110px;
 }
 
+.listItem:hover,
+.listItem:focus {
+    color: #5fb482;
+}
+
+.social:hover {
+    list-style: none;
+}
+
+.socialIcon:hover svg .icon,
+.socialIcon:focus svg .icon {
+    fill: #5fb482;
+}
+
 .logo {
     margin-bottom: 2.5em;
 }
@@ -83,7 +97,7 @@
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 62.5em) {
     .list {
         gap: 42px;
     }
