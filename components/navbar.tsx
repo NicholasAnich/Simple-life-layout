@@ -1,18 +1,23 @@
+import { useState } from "react";
+import { Public_Sans } from "@next/font/google";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "./Header.module.css";
-import { useState } from "react";
+import styles from "./NavBar.module.css";
 
-export default function Header() {
+const publicSans = Public_Sans({ subsets: ["latin"] });
+
+export default function Navbar() {
     const [navbarOpen, setNavbarOpen] = useState(false);
 
     const handleToggle = () => {
         setNavbarOpen((prev) => !prev);
     };
     return (
-        <div className={styles.container}>
-            <header className={styles.header}>
-                <Image className={styles.img} src="/images/logo.svg" alt="Arrow Logo" width={60} height={32}></Image>
+        <header className={`${styles.container} ${publicSans.className}`}>
+            <div className={styles.body}>
+                <Link href={"/"}>
+                    <Image className={styles.img} src="/images/logo.svg" alt="Arrow Logo" width={60} height={32}></Image>
+                </Link>
                 <nav className={styles.nav}>
                     <ul className={styles.list}>
                         <li className={styles.item}>
@@ -56,7 +61,7 @@ export default function Header() {
                         </Link>
                     </li>
                 </ul>
-            </header>
-        </div>
+            </div>
+        </header>
     );
 }

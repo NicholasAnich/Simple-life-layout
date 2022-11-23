@@ -6,12 +6,15 @@ import type { AppProps } from "next/app";
 const publicSans = Public_Sans({
     weight: "400",
     variable: "--public-sans",
+    subsets: ["latin"],
 });
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
-        <main className={publicSans.className}>
-            <Component {...pageProps} />
-        </main>
+        <Layout>
+            <div className={publicSans.className}>
+                <Component {...pageProps} />
+            </div>
+        </Layout>
     );
 }

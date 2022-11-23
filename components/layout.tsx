@@ -1,17 +1,13 @@
-import React from "react";
 import Footer from "./footer";
-import Header from "./header";
+import NavBar from "./navbar";
 import styles from "./Layout.module.css";
-import other from "../styles/Home.module.css";
 
-export default function Layout({ children, home, contact }: { children: React.ReactNode; home: boolean; contact: boolean }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
     return (
-        <div>
-            <div className={styles.container}>
-                <Header />
-                <main>{children}</main>
-            </div>
+        <>
+            <NavBar />
+            <main className={styles.container}>{children}</main>
             <Footer />
-        </div>
+        </>
     );
 }

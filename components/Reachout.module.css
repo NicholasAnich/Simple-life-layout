@@ -1,0 +1,27 @@
+.linkBtn {
+    display: inline-block;
+    padding: 17px 32px;
+    font-size: 12px;
+    color: #33323d;
+    border: 1px solid #33323d;
+    opacity: 0.8;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.linkBtn:hover,
+.linkBtn:focus {
+    color: white;
+    background-color: #33323d;
+    opacity: 1;
+}
+
+.contactMe {
+    margin: 115px 0 80px;
+    text-align: center;
+}
+
+.contactTitle {
+    margin-bottom: 40px;
+}

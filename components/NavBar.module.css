@@ -1,12 +1,20 @@
 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0;
     margin: 2em 0 2.5em 0;
 }
 
-.header {
+.body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-grow: 1;
+
+    max-width: 1110px;
+    margin: 0;
+    padding: 0 2.4375em;
 }
 
 .img {
@@ -41,6 +49,7 @@
     background-color: #33323d;
     color: white;
     list-style: none;
+    z-index: 1;
 }
 
 .burgerItem {
