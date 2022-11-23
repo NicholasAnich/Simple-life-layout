@@ -1,8 +1,7 @@
 import Head from "next/head";
-import Layout from "../components/layout";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import Reachout from "../components/reachout";
 
 export default function Home() {
     return (
@@ -48,28 +47,16 @@ export default function Home() {
                                 GO TO PORTFOLIO
                             </Link>
                         </div>
-                        <div className={styles.contactMe}>
+                        {/* <div className={styles.contactMe}>
                             <h2 className={styles.contactTitle}>Interested in doing a project together?</h2>
                             <Link className={styles.linkBtn} href={"/contact"}>
                                 Contact Me
                             </Link>
-                        </div>
+                        </div> */}
+                        <Reachout />
                     </div>
                 </div>
             </div>
         </div>
     );
-}
-
-{
-    /* <Head>
-                <title>Mimalist Portfolio Home Page</title>
-                <meta name="description" content="Minmalist Portfolio Project" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <div className={styles.container}>
-                <Header></Header>
-                <main className={styles.main}></main>
-            </div>
-            <Footer></Footer> */
 }
