@@ -53,8 +53,8 @@ export default function Home() {
                                 Contact Me
                             </Link>
                         </div> */}
-                        <Reachout />
                     </div>
+                    <Reachout />
                 </div>
             </div>
         </div>
