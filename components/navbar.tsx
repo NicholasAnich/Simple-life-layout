@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 
 const publicSans = Public_Sans({ subsets: ["latin"] });
 
-export default function Navbar({ page = "home" }: { page: string }) {
+export default function Navbar() {
     const [navbarOpen, setNavbarOpen] = useState(false);
     const router = useRouter();
     const currentRoute = router.pathname;

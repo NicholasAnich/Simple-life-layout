@@ -71,6 +71,8 @@ I ended up changing the button element to a span and it fixed the problem right 
 
 -   [Netflify Page Deployment](https://www.netlify.com/) - I use Netlify for deploment because I found github pages can sometimes be buggy.
 
+-   [Active Link Colors](https://www.slingacademy.com/article/how-to-highlight-currently-active-link-in-next-js/) - Great for setting active link colors using the useRouter hook with nextjs.
+
 ## Author
 
 -   GitHub - [@NicholasAnich](https://github.com/NicholasAnich)
