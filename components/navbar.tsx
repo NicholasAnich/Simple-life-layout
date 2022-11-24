@@ -3,15 +3,19 @@ import { Public_Sans } from "@next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./NavBar.module.css";
+import { useRouter } from "next/router";
 
 const publicSans = Public_Sans({ subsets: ["latin"] });
 
-export default function Navbar() {
+export default function Navbar({ page = "home" }: { page: string }) {
     const [navbarOpen, setNavbarOpen] = useState(false);
+    const router = useRouter();
+    const currentRoute = router.pathname;
 
     const handleToggle = () => {
         setNavbarOpen((prev) => !prev);
     };
+
     return (
         <header className={`${styles.container} ${publicSans.className}`}>
             <div className={styles.body}>
@@ -21,17 +25,17 @@ export default function Navbar() {
                 <nav className={styles.nav}>
                     <ul className={styles.list}>
                         <li className={styles.item}>
-                            <Link href="/" className={styles.link}>
+                            <Link href="/" className={`${styles.link} ${currentRoute === "/" ? styles.active : styles.nonActive}`}>
                                 Home
                             </Link>
                         </li>
                         <li className={styles.item}>
-                            <Link href="/portfolio" className={styles.link}>
+                            <Link href="/portfolio" className={`${styles.link} ${currentRoute === "/portfolio" ? styles.active : styles.nonActive}`}>
                                 Portfolio
                             </Link>
                         </li>
                         <li className={styles.item}>
-                            <Link href="/contact" className={styles.link}>
+                            <Link href="/contact" className={`${styles.link} ${currentRoute === "/contact" ? styles.active : styles.nonActive}`}>
                                 Contact Me
                             </Link>
                         </li>

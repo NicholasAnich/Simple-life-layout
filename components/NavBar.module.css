@@ -91,6 +91,16 @@
     border: none;
 }
 
+/* Active : NonActive Link Colors */
+
+.active {
+    color: green;
+}
+
+.nonActive {
+    color: #33323d;
+}
+
 /* Hiding & Revealing Nav Menus */
 
 .open {
