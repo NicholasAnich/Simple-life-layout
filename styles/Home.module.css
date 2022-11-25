@@ -1,5 +1,4 @@
-.container {
-    /* position: relative; */
+/* .container {
     padding: 0 2em;
     margin: 0 auto;
     max-width: 1110px;
@@ -10,7 +9,7 @@
     .container {
         padding: 0 2.4375em;
     }
-}
+} */
 /* IMAGES */
 
 .heroImage {
@@ -28,12 +27,6 @@
 }
 
 /* Author */
-.author {
-    /* margin-bottom: 2em; */
-}
-
-.aboutMe {
-}
 .aboutMe::before {
     content: "";
     display: block;
@@ -49,12 +42,10 @@
     display: block;
     width: 100%;
     height: 1px;
-    margin: 51px 0 0;
+    /* margin: 51px 0 0; */
+    margin: 3.1875rem 0 0;
     background-color: #33323d;
     opacity: 0.15;
-}
-
-.aboutTitle {
 }
 
 .aboutBody {
@@ -70,7 +61,8 @@
     margin: 0;
     padding: 0;
     cursor: pointer;
-    margin-bottom: 96px;
+    /* margin-bottom: 96px; */
+    margin-bottom: 6em;
     background-color: #203a4c;
 }
 
@@ -85,7 +77,7 @@
 .btn {
     display: flex;
     align-items: center;
-    padding: 17px 0;
+    padding: 1.0625em 0;
     margin: 0;
     grid-area: button;
     font-family: inherit;
@@ -100,13 +92,13 @@
 .btnImage {
     padding: 0;
     margin: 0;
-    padding: 18px 16px;
+    padding: 1.125em 1em;
     grid-area: arrow;
 }
 .btnImageDark {
     padding: 0;
     margin: 0;
-    padding: 18px 16px;
+    padding: 1.125em 1em;
     background-color: #000;
     opacity: 0.1;
     grid-area: arrow;
@@ -119,9 +111,6 @@
     justify-self: center;
     fill: none;
     stroke-width: 1;
-}
-
-.btnArrows:hover {
 }
 
 .btnText {
@@ -145,7 +134,7 @@
 
 .linkBtn {
     display: inline-block;
-    padding: 17px 32px;
+    padding: 1.4166em 2.6666em;
     font-size: 12px;
     color: #33323d;
     border: 1px solid #33323d;
@@ -162,23 +151,14 @@
     opacity: 1;
 }
 
-.contactMe {
-    margin: 115px 0 80px;
-    text-align: center;
-}
-
-.contactTitle {
-    margin-bottom: 40px;
-}
-
 /* Mobile@2 */
-@media (min-width: 400px) {
+@media (min-width: 25em) {
     .heroImage {
         background-image: url("../public/images/homepage/mobile/image-homepage-hero@2x.jpg");
     }
 }
 /* Tabelet */
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
     .heroImage {
         min-height: 542px;
         background-image: url("../public/images/homepage/tablet/image-homepage-hero.jpg");
@@ -186,7 +166,7 @@
 }
 
 /* Desktop */
-@media (min-width: 1000px) {
+@media (min-width: 62.5em) {
     .heroImage {
         min-height: 600px;
         background-image: url("../public/images/homepage/desktop/image-homepage-hero.jpg");
