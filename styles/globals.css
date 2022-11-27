@@ -1,3 +1,6 @@
+@value breakpoints: "../components/Bpoints.module.css";
+@value small, medium, large from breakpoints;
+
 :root {
     --primary-font-color: #33323d;
     --primary-bg-color: #fafafa;
@@ -63,3 +66,17 @@ h3 {
         font-size: 32px;
     }
 }
+
+/* @media (medium) {
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+} */
