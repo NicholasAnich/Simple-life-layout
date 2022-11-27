@@ -1,0 +1,6 @@
+/* 400px */
+@value small: min-width: 25em;
+/* 600px */
+@value medium: min-width: 37.5em;
+/* 1000px */
+@value large: min-width: 62.5em;

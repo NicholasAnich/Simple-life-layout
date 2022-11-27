@@ -1,3 +1,6 @@
+@value breakpoints: "./Bpoints.module.css";
+@value small, medium, large from breakpoints;
+
 .container {
     padding: 0 2em;
     margin: 0 auto;
@@ -6,7 +9,7 @@
     min-height: 100vh;
 }
 
-@media (min-width: 37.5em) {
+@media (medium) {
     .container {
         padding: 0 2.4375em;
     }
