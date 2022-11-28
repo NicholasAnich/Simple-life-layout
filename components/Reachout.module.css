@@ -1,3 +1,6 @@
+@value breakpoints: "./Bpoints.module.css";
+@value small, medium, large from breakpoints;
+
 .linkBtn {
     display: inline-block;
     padding: 1.4166em 2.6666em;
@@ -24,4 +27,38 @@
 
 .contactTitle {
     margin-bottom: 1em;
+}
+
+@media (medium) {
+    .contactMe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        /* margin: 0; */
+        /* margin: 96px 0; */
+    }
+    .contactTitle {
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+        /* min-width: 350px; */
+        gap: 32px;
+    }
+
+    .contactTitle::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 1px;
+        margin: 2em 0 2em;
+        background-color: #33323d;
+        opacity: 0.15;
+        /* flex-shrink: 1; */
+    }
+
+    .linkContainer {
+        /* margin-left: 1rem; */
+        flex-shrink: 0;
+    }
 }

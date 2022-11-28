@@ -1,12 +1,19 @@
 @value breakpoints: "./Bpoints.module.css";
 @value small, medium, large from breakpoints;
 
+.layout {
+    position: relative;
+    min-height: 100vh;
+}
+
 .container {
     padding: 0 2em;
     margin: 0 auto;
     /* max-width: 1110px; */
     max-width: 69.375rem;
-    min-height: 100vh;
+    /* position: absolute; */
+    /* min-height: 100%; */
+    padding-bottom: 2.5rem;
 }
 
 @media (medium) {

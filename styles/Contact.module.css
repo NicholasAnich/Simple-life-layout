@@ -1,3 +1,6 @@
+@value breakpoints: "../components/Bpoints.module.css";
+@value small, medium, large from breakpoints;
+
 .main {
     min-height: 100vh;
     /* display: grid; */
