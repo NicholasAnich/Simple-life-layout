@@ -1,8 +1,11 @@
 @value breakpoints: "../components/Bpoints.module.css";
 @value small, medium, large from breakpoints;
 
-/* IMAGES */
+.main {
+    min-height: 100%;
+}
 
+/* IMAGES */
 .heroImage {
     display: block;
 
@@ -151,9 +154,51 @@
 }
 /* Tabelet */
 @media (medium) {
+    .heroSection {
+        position: relative;
+        margin-bottom: 96px;
+    }
+
     .heroImage {
-        min-height: 542px;
+        /* min-width: 688px; */
+        min-height: 600px;
+    }
+    .heroImage {
+        min-height: 600px;
         background-image: url("../public/images/homepage/tablet/image-homepage-hero.jpg");
+    }
+
+    .heroIntro {
+        position: absolute;
+        background-color: white;
+        bottom: 0;
+        /* max-width: 514px; */
+        min-width: 514px;
+    }
+
+    .heroTitle {
+        overflow: hidden;
+        margin-bottom: 48px;
+        margin-top: 56px;
+        line-height: 42px;
+        letter-spacing: -0.357143px;
+        max-width: 458px;
+        padding: 0 1em 0 0;
+    }
+
+    .btnContainer {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .aboutMeSection {
+        display: grid;
+        grid-template-columns: minmax(250px, 281px) minmax(250px, 339px);
+        gap: 4.375em;
+    }
+
+    .aboutMe::before {
+        margin-top: 0;
     }
 }
 
