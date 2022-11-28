@@ -32,16 +32,18 @@
 @media (medium) {
     .contactMe {
         display: flex;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
         gap: 32px;
         /* margin: 0; */
+        margin: 150px 0;
         /* margin: 96px 0; */
     }
     .contactTitle {
         display: flex;
         align-items: center;
-        margin-top: 0;
+        flex-grow: 1;
+        /* margin-top: 0; */
         /* min-width: 350px; */
         gap: 32px;
     }
@@ -51,7 +53,7 @@
         display: block;
         width: 50%;
         height: 1px;
-        margin: 2em 0 2em;
+        /* margin: 2em 0 2em; */
         background-color: #33323d;
         opacity: 0.15;
         /* flex-shrink: 1; */
