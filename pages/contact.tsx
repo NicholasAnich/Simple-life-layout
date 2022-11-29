@@ -12,13 +12,11 @@ export default function Contact() {
                 <meta name="description" content="Minmalist Portfolio Project" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className={styles.container}>
-                <section className={contact.main}>
-                    <div className={contact.images}>
-                        <p>contact here</p>
-                    </div>
-                </section>
-            </div>
+            {/* <div className={styles.container}> */}
+            <section className={contact.main}>
+                <p>contact here</p>
+            </section>
+            {/* </div> */}
         </div>
     );
 }
