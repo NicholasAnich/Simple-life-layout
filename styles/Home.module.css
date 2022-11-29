@@ -207,5 +207,19 @@
     .heroImage {
         min-height: 600px;
         background-image: url("../public/images/homepage/desktop/image-homepage-hero.jpg");
+        background-position: initial;
+    }
+
+    .heroTitle {
+        min-width: 0;
+        max-width: 0;
+        margin-bottom: 53px;
+        margin-right: 55px;
+        line-height: 50px;
+        min-width: 390px;
+        padding-right: 0.2em;
+    }
+    .heroIntro {
+        min-width: 0;
     }
 }
