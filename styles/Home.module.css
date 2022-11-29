@@ -151,6 +151,9 @@
     .heroImage {
         background-image: url("../public/images/homepage/mobile/image-homepage-hero@2x.jpg");
     }
+    .author {
+        text-align: center;
+    }
 }
 /* Tabelet */
 @media (medium) {
@@ -195,10 +198,17 @@
         display: grid;
         grid-template-columns: minmax(250px, 281px) minmax(250px, 339px);
         gap: 4.375em;
+        justify-content: space-between;
     }
 
     .aboutMe::before {
         margin-top: 0;
+    }
+}
+
+@media (min-width: 640px) {
+    .author {
+        align-self: center;
     }
 }
 
@@ -207,5 +217,41 @@
     .heroImage {
         min-height: 600px;
         background-image: url("../public/images/homepage/desktop/image-homepage-hero.jpg");
+        background-position: initial;
+    }
+
+    .heroTitle {
+        min-width: 0;
+        max-width: 0;
+        margin-bottom: 53px;
+        margin-right: 55px;
+        line-height: 50px;
+        min-width: 390px;
+        padding-right: 0.2em;
+    }
+    .heroIntro {
+        min-width: 0;
+    }
+
+    .aboutMeSection {
+        grid-template-columns: minmax(400px, 540px) minmax(250px, 350px);
+        margin-top: 150px;
+        gap: 125px;
+    }
+
+    .aboutMe::before {
+        margin-bottom: 50px;
+    }
+
+    .aboutMe::after {
+        margin-top: 50px;
+    }
+
+    .author {
+        align-self: auto;
+    }
+
+    .aboutBody {
+        /* margin-right: 0.3em; */
     }
 }

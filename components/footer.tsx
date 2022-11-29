@@ -32,7 +32,6 @@ export default function Footer() {
                 <ul className={footer.social}>
                     <li>
                         <Link href="#" className={footer.socialIcon}>
-                            {/* <Image src="/images/icons/github-light.svg" alt="github logo and link" width={25} height={24}></Image> */}
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" aria-labelledby="github">
                                 <path
                                     className={footer.icon}
@@ -44,7 +43,6 @@ export default function Footer() {
                     </li>
                     <li>
                         <Link href="#" className={footer.socialIcon}>
-                            {/* <Image src="/images/icons/twitter-light.svg" alt="twitter logo and link" width={24} height={20}></Image> */}
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" aria-labelledby="twitter">
                                 <path
                                     className={footer.icon}
@@ -56,13 +54,6 @@ export default function Footer() {
                     </li>
                     <li>
                         <Link href="#" className={footer.socialIcon}>
-                            {/* <Image
-                                className={footer.icon}
-                                src="/images/icons/linkedin-light.svg"
-                                alt="Linkedin logo and link"
-                                width={24}
-                                height={24}
-                            ></Image> */}
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-labelledby="linkedin">
                                 <path
                                     className={footer.icon}
