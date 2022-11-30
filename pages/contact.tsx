@@ -75,7 +75,7 @@ export default function Contact() {
                         <textarea
                             className={`${contact.input} ${contact.message}`}
                             id="message"
-                            type="textarea"
+                            // type="textarea"
                             placeholder="How can I help?"
                             required
                         />
