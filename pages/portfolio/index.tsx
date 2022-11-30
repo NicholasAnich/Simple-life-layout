@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Reachout from "../../components/reachout";
 import portfolio from "../../styles/Portfolio.module.css";
+import Link from "next/link";
 import { projects } from "../../data";
 
 export const getStaticProps = async () => {
@@ -43,10 +44,13 @@ export default function Portfolio({ projectList }: { projectList: Project }) {
             <>
                 {/* <img className={portfolio.images} src={`../.${mobile.sm}`} alt={name} /> */}
                 <img className={portfolio.images} src={mobile.sm} alt={name} />
-                <div>
-                    <h2>{name}</h2>
-                    <p>{summary}</p>
-                    <button>View Project</button>
+                <div className={portfolio.body}>
+                    <h2 className={portfolio.title}>{name}</h2>
+                    <p className={portfolio.summary}>{summary}</p>
+                    {/* <button>View Project</button> */}
+                    <Link className={portfolio.linkBtn} href={"#"}>
+                        View Project
+                    </Link>
                 </div>
             </>
         );
