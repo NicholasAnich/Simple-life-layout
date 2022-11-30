@@ -3,12 +3,6 @@
 
 .main {
     min-height: 100%;
-    /* display: grid; */
-    /* grid-template-rows: auto; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* display: flex; */
-    /* flex-direction: column; */
 }
 
 .title {
@@ -84,4 +78,22 @@
     /* font: inherit; */
     resize: none;
     min-height: 96px;
+}
+
+.btn {
+    color: #fff;
+    background-color: #203a4c;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    max-width: 200px;
+    min-height: 48px;
+    cursor: pointer;
+    /* padding: 1em 1.5em; */
+    /* padding-block: 48px; */
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #5fb482;
 }

@@ -70,7 +70,9 @@ export default function Contact() {
                         Message
                     </label>
                     <textarea className={`${contact.input} ${contact.message}`} id="message" type="textarea" placeholder="How can I help?" required />
-                    <button type="submit">Send Message</button>
+                    <button className={contact.btn} type="submit">
+                        Send Message
+                    </button>
                 </div>
             </div>
         </div>
