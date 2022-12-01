@@ -37,16 +37,36 @@ export type Project = {
         };
         preview: {
             mobile: {
-                sm: string;
-                med: string;
+                sm: {
+                    1: string;
+                    2: string;
+                };
+                med: {
+                    1: string;
+                    2: string;
+                };
             };
             tablet: {
-                med: string;
-                lg: string;
+                med: {
+                    1: string;
+                    2: string;
+                };
+
+                lg: {
+                    1: string;
+                    2: string;
+                };
             };
             desktop: {
-                med: string;
-                lg: string;
+                med: {
+                    1: string;
+                    2: string;
+                };
+
+                lg: {
+                    1: string;
+                    2: string;
+                };
             };
         };
     };
