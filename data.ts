@@ -1,5 +1,10 @@
 type Project = {
-    name: string;
+    id: number;
+    projectName: string;
+    type: string;
+    engineer: string;
+    languages: string[];
+    background: string;
     summary: string;
     images: {
         mobile: {
@@ -15,11 +20,47 @@ type Project = {
             lg: string;
         };
     };
+    details: {
+        hero: {
+            mobile: {
+                sm: string;
+                med: string;
+            };
+            tablet: {
+                med: string;
+                lg: string;
+            };
+            desktop: {
+                med: string;
+                lg: string;
+            };
+        };
+        preview: {
+            mobile: {
+                sm: string;
+                med: string;
+            };
+            tablet: {
+                med: string;
+                lg: string;
+            };
+            desktop: {
+                med: string;
+                lg: string;
+            };
+        };
+    };
 }[];
 
 export const projects: Project = [
     {
-        name: "Manage",
+        id: 0,
+        projectName: "Manage",
+        type: "Interaction Design",
+        engineer: "Front End Development",
+        languages: ["HTML", "CSS", "JS"],
+        background:
+            "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
         summary:
             "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
         images: {
@@ -36,9 +77,45 @@ export const projects: Project = [
                 lg: "/images/portfolio/desktop/image-portfolio-manage@2x.jpg",
             },
         },
+        details: {
+            hero: {
+                mobile: {
+                    sm: "/images/detail/mobile/image-manage-hero.jpg",
+                    med: "/images/detail/mobile/image-manage-hero@2x.jpg",
+                },
+                tablet: {
+                    med: "/images/detail/tablet/image-manage-hero.jpg",
+                    lg: "/images/detail/tablet/image-manage-hero@2x.jpg",
+                },
+                desktop: {
+                    med: "/images/detail/desktop/image-manage-hero.jpg",
+                    lg: "/images/detail/desktop/image-manage-hero@2x.jpg",
+                },
+            },
+            preview: {
+                mobile: {
+                    sm: "/images/detail/mobile/image-manage-preview.jpg",
+                    med: "/images/detail/mobile/image-manage-preview@2x.jpg",
+                },
+                tablet: {
+                    med: "/images/detail/tablet/image-manage-preview.jpg",
+                    lg: "/images/detail/tablet/image-manage-preview@2x.jpg",
+                },
+                desktop: {
+                    med: "/images/detail/desktop/image-manage-preview.jpg",
+                    lg: "/images/detail/desktop/image-manage-preview@2x.jpg",
+                },
+            },
+        },
     },
     {
-        name: "Bookmark",
+        id: 1,
+        projectName: "Bookmark",
+        type: "Interaction Design",
+        engineer: "Front End Development",
+        languages: ["HTML", "CSS", "JS"],
+        background:
+            "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
         summary:
             "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.",
         images: {
@@ -55,9 +132,45 @@ export const projects: Project = [
                 lg: "/images/portfolio/desktop/image-portfolio-bookmark@2x.jpg",
             },
         },
+        details: {
+            hero: {
+                mobile: {
+                    sm: "/images/detail/mobile/image-bookmark-hero.jpg",
+                    med: "/images/detail/mobile/image-bookmark-hero@2x.jpg",
+                },
+                tablet: {
+                    med: "/images/detail/tablet/image-bookmark-hero.jpg",
+                    lg: "/images/detail/tablet/image-bookmark-hero@2x.jpg",
+                },
+                desktop: {
+                    med: "/images/detail/desktop/image-bookmark-hero.jpg",
+                    lg: "/images/detail/desktop/image-bookmark-hero@2x.jpg",
+                },
+            },
+            preview: {
+                mobile: {
+                    sm: "/images/detail/mobile/image-bookmark-preview.jpg",
+                    med: "/images/detail/mobile/image-bookmark-preview@2x.jpg",
+                },
+                tablet: {
+                    med: "/images/detail/tablet/image-bookmark-preview.jpg",
+                    lg: "/images/detail/tablet/image-bookmark-preview@2x.jpg",
+                },
+                desktop: {
+                    med: "/images/detail/desktop/image-bookmark-preview.jpg",
+                    lg: "/images/detail/desktop/image-bookmark-preview@2x.jpg",
+                },
+            },
+        },
     },
     {
-        name: "Insure",
+        id: 2,
+        projectName: "Insure",
+        type: "Interaction Design",
+        engineer: "Front End Development",
+        languages: ["HTML", "CSS", "JS"],
+        background:
+            "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
         summary:
             "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
         images: {
@@ -74,9 +187,45 @@ export const projects: Project = [
                 lg: "/images/portfolio/desktop/image-portfolio-insure@2x.jpg",
             },
         },
+        details: {
+            hero: {
+                mobile: {
+                    sm: "/images/detail/mobile/image-insure-hero.jpg",
+                    med: "/images/detail/mobile/image-insure-hero@2x.jpg",
+                },
+                tablet: {
+                    med: "/images/detail/tablet/image-insure-hero.jpg",
+                    lg: "/images/detail/tablet/image-insure-hero@2x.jpg",
+                },
+                desktop: {
+                    med: "/images/detail/desktop/image-insure-hero.jpg",
+                    lg: "/images/detail/desktop/image-insure-hero@2x.jpg",
+                },
+            },
+            preview: {
+                mobile: {
+                    sm: "/images/detail/mobile/image-insure-preview.jpg",
+                    med: "/images/detail/mobile/image-insure-preview@2x.jpg",
+                },
+                tablet: {
+                    med: "/images/detail/tablet/image-insure-preview.jpg",
+                    lg: "/images/detail/tablet/image-insure-preview@2x.jpg",
+                },
+                desktop: {
+                    med: "/images/detail/desktop/image-insure-preview.jpg",
+                    lg: "/images/detail/desktop/image-insure-preview@2x.jpg",
+                },
+            },
+        },
     },
     {
-        name: "Fylo",
+        id: 3,
+        projectName: "Fylo",
+        type: "Interaction Design",
+        engineer: "Front End Development",
+        languages: ["HTML", "CSS"],
+        background:
+            "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
         summary:
             "This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
         images: {
@@ -91,6 +240,36 @@ export const projects: Project = [
             desktop: {
                 med: "/images/portfolio/desktop/image-portfolio-fylo.jpg",
                 lg: "/images/portfolio/desktop/image-portfolio-fylo@2x.jpg",
+            },
+        },
+        details: {
+            hero: {
+                mobile: {
+                    sm: "/images/detail/mobile/image-fylo-hero.jpg",
+                    med: "/images/detail/mobile/image-fylo-hero@2x.jpg",
+                },
+                tablet: {
+                    med: "/images/detail/tablet/image-fylo-hero.jpg",
+                    lg: "/images/detail/tablet/image-fylo-hero@2x.jpg",
+                },
+                desktop: {
+                    med: "/images/detail/desktop/image-fylo-hero.jpg",
+                    lg: "/images/detail/desktop/image-fylo-hero@2x.jpg",
+                },
+            },
+            preview: {
+                mobile: {
+                    sm: "/images/detail/mobile/image-fylo-preview.jpg",
+                    med: "/images/detail/mobile/image-fylo-preview@2x.jpg",
+                },
+                tablet: {
+                    med: "/images/detail/tablet/image-fylo-preview.jpg",
+                    lg: "/images/detail/tablet/image-fylo-preview@2x.jpg",
+                },
+                desktop: {
+                    med: "/images/detail/desktop/image-fylo-preview.jpg",
+                    lg: "/images/detail/desktop/image-fylo-preview@2x.jpg",
+                },
             },
         },
     },

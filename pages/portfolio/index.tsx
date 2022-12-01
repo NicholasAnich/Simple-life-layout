@@ -1,9 +1,13 @@
 import Head from "next/head";
-import Image from "next/image";
-import Reachout from "../../components/reachout";
-import portfolio from "../../styles/Portfolio.module.css";
 import Link from "next/link";
+
+import Reachout from "../../components/reachout";
+import Designs from "../../components/designs";
+
+import portfolio from "../../styles/Portfolio.module.css";
+
 import { projects } from "../../data";
+import { Project } from "../../lib/types";
 
 export const getStaticProps = async () => {
     return {
@@ -13,46 +17,41 @@ export const getStaticProps = async () => {
     };
 };
 
-type Project = {
-    name: string;
-    summary: string;
-    images: {
-        mobile: {
-            sm: string;
-            med: string;
-        };
-        tablet: {
-            med: string;
-            lg: string;
-        };
-        desktop: {
-            med: string;
-            lg: string;
-        };
-    };
-}[];
-
 export default function Portfolio({ projectList }: { projectList: Project }) {
     const projects = projectList.map((project, i) => {
         const {
-            name,
+            id,
+            projectName,
             summary,
             images: { mobile, tablet, desktop },
         } = project;
 
+        // return (
+        //     <div key={`${projectName}${i}`}>
+        //         <img className={portfolio.images} src={mobile.sm} alt={projectName} />
+        //         <div className={portfolio.body}>
+        //             <h2 className={portfolio.title}>{projectName}</h2>
+        //             <p className={portfolio.summary}>{summary}</p>
+        //             <Link
+        //                 className={portfolio.linkBtn}
+        //                 href={{
+        //                     pathname: `/portfolio/${projectName}`,
+        //                     query: {
+        //                         id: id,
+        //                     },
+        //                 }}
+        //             >
+        //                 View Project
+        //             </Link>
+        //         </div>
+        //     </div>
+        // );
+
         return (
-            <>
-                {/* <img className={portfolio.images} src={`../.${mobile.sm}`} alt={name} /> */}
-                <img className={portfolio.images} src={mobile.sm} alt={name} />
-                <div className={portfolio.body}>
-                    <h2 className={portfolio.title}>{name}</h2>
-                    <p className={portfolio.summary}>{summary}</p>
-                    {/* <button>View Project</button> */}
-                    <Link className={portfolio.linkBtn} href={"#"}>
-                        View Project
-                    </Link>
-                </div>
-            </>
+            <div key={`${projectName}${i}`}>
+                {/* <img className={portfolio.images} src={mobile.sm} alt={projectName} /> */}
+                <Designs key={id} {...project} />
+            </div>
         );
     });
 
