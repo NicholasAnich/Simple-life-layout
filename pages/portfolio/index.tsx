@@ -22,34 +22,12 @@ export default function Portfolio({ projectList }: { projectList: Project }) {
         const {
             id,
             projectName,
-            summary,
-            images: { mobile, tablet, desktop },
+            // summary,
+            // images: { mobile, tablet, desktop },
         } = project;
-
-        // return (
-        //     <div key={`${projectName}${i}`}>
-        //         <img className={portfolio.images} src={mobile.sm} alt={projectName} />
-        //         <div className={portfolio.body}>
-        //             <h2 className={portfolio.title}>{projectName}</h2>
-        //             <p className={portfolio.summary}>{summary}</p>
-        //             <Link
-        //                 className={portfolio.linkBtn}
-        //                 href={{
-        //                     pathname: `/portfolio/${projectName}`,
-        //                     query: {
-        //                         id: id,
-        //                     },
-        //                 }}
-        //             >
-        //                 View Project
-        //             </Link>
-        //         </div>
-        //     </div>
-        // );
 
         return (
             <div key={`${projectName}${i}`}>
-                {/* <img className={portfolio.images} src={mobile.sm} alt={projectName} /> */}
                 <Designs key={id} {...project} />
             </div>
         );

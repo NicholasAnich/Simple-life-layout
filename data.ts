@@ -37,16 +37,36 @@ type Project = {
         };
         preview: {
             mobile: {
-                sm: string;
-                med: string;
+                sm: {
+                    1: string;
+                    2: string;
+                };
+                med: {
+                    1: string;
+                    2: string;
+                };
             };
             tablet: {
-                med: string;
-                lg: string;
+                med: {
+                    1: string;
+                    2: string;
+                };
+
+                lg: {
+                    1: string;
+                    2: string;
+                };
             };
             desktop: {
-                med: string;
-                lg: string;
+                med: {
+                    1: string;
+                    2: string;
+                };
+
+                lg: {
+                    1: string;
+                    2: string;
+                };
             };
         };
     };
@@ -94,16 +114,34 @@ export const projects: Project = [
             },
             preview: {
                 mobile: {
-                    sm: "/images/detail/mobile/image-manage-preview.jpg",
-                    med: "/images/detail/mobile/image-manage-preview@2x.jpg",
+                    sm: {
+                        1: "/images/detail/mobile/image-manage-preview-1.jpg",
+                        2: "/images/detail/mobile/image-manage-preview-2.jpg",
+                    },
+                    med: {
+                        1: "/images/detail/mobile/image-manage-preview-1@2x.jpg",
+                        2: "/images/detail/mobile/image-manage-preview-2@2x.jpg",
+                    },
                 },
                 tablet: {
-                    med: "/images/detail/tablet/image-manage-preview.jpg",
-                    lg: "/images/detail/tablet/image-manage-preview@2x.jpg",
+                    med: {
+                        1: "/images/detail/tablet/image-manage-preview-1.jpg",
+                        2: "/images/detail/tablet/image-manage-preview-2.jpg",
+                    },
+                    lg: {
+                        1: "/images/detail/tablet/image-manage-preview-1@2x.jpg",
+                        2: "/images/detail/tablet/image-manage-preview-2@2x.jpg",
+                    },
                 },
                 desktop: {
-                    med: "/images/detail/desktop/image-manage-preview.jpg",
-                    lg: "/images/detail/desktop/image-manage-preview@2x.jpg",
+                    med: {
+                        1: "/images/detail/desktop/image-manage-preview-1.jpg",
+                        2: "/images/detail/desktop/image-manage-preview-2.jpg",
+                    },
+                    lg: {
+                        1: "/images/detail/desktop/image-manage-preview-1@2x.jpg",
+                        2: "/images/detail/desktop/image-manage-preview-2@2x.jpg",
+                    },
                 },
             },
         },
@@ -149,16 +187,34 @@ export const projects: Project = [
             },
             preview: {
                 mobile: {
-                    sm: "/images/detail/mobile/image-bookmark-preview.jpg",
-                    med: "/images/detail/mobile/image-bookmark-preview@2x.jpg",
+                    sm: {
+                        1: "/images/detail/mobile/image-bookmark-preview-1.jpg",
+                        2: "/images/detail/mobile/image-bookmark-preview-2.jpg",
+                    },
+                    med: {
+                        1: "/images/detail/mobile/image-bookmark-preview-1@2x.jpg",
+                        2: "/images/detail/mobile/image-bookmark-preview-2@2x.jpg",
+                    },
                 },
                 tablet: {
-                    med: "/images/detail/tablet/image-bookmark-preview.jpg",
-                    lg: "/images/detail/tablet/image-bookmark-preview@2x.jpg",
+                    med: {
+                        1: "/images/detail/tablet/image-bookmark-preview-1.jpg",
+                        2: "/images/detail/tablet/image-bookmark-preview-2.jpg",
+                    },
+                    lg: {
+                        1: "/images/detail/tablet/image-bookmark-preview-1@2x.jpg",
+                        2: "/images/detail/tablet/image-bookmark-preview-2@2x.jpg",
+                    },
                 },
                 desktop: {
-                    med: "/images/detail/desktop/image-bookmark-preview.jpg",
-                    lg: "/images/detail/desktop/image-bookmark-preview@2x.jpg",
+                    med: {
+                        1: "/images/detail/desktop/image-bookmark-preview-1.jpg",
+                        2: "/images/detail/desktop/image-bookmark-preview-2.jpg",
+                    },
+                    lg: {
+                        1: "/images/detail/desktop/image-bookmark-preview-1@2x.jpg",
+                        2: "/images/detail/desktop/image-bookmark-preview-2@2x.jpg",
+                    },
                 },
             },
         },
@@ -204,16 +260,34 @@ export const projects: Project = [
             },
             preview: {
                 mobile: {
-                    sm: "/images/detail/mobile/image-insure-preview.jpg",
-                    med: "/images/detail/mobile/image-insure-preview@2x.jpg",
+                    sm: {
+                        1: "/images/detail/mobile/image-insure-preview-1.jpg",
+                        2: "/images/detail/mobile/image-insure-preview-2.jpg",
+                    },
+                    med: {
+                        1: "/images/detail/mobile/image-insure-preview-1@2x.jpg",
+                        2: "/images/detail/mobile/image-insure-preview-2@2x.jpg",
+                    },
                 },
                 tablet: {
-                    med: "/images/detail/tablet/image-insure-preview.jpg",
-                    lg: "/images/detail/tablet/image-insure-preview@2x.jpg",
+                    med: {
+                        1: "/images/detail/tablet/image-insure-preview-1.jpg",
+                        2: "/images/detail/tablet/image-insure-preview-2.jpg",
+                    },
+                    lg: {
+                        1: "/images/detail/tablet/image-insure-preview-1@2x.jpg",
+                        2: "/images/detail/tablet/image-insure-preview-2@2x.jpg",
+                    },
                 },
                 desktop: {
-                    med: "/images/detail/desktop/image-insure-preview.jpg",
-                    lg: "/images/detail/desktop/image-insure-preview@2x.jpg",
+                    med: {
+                        1: "/images/detail/desktop/image-insure-preview-1.jpg",
+                        2: "/images/detail/desktop/image-insure-preview-2.jpg",
+                    },
+                    lg: {
+                        1: "/images/detail/desktop/image-insure-preview-1@2x.jpg",
+                        2: "/images/detail/desktop/image-insure-preview-2@2x.jpg",
+                    },
                 },
             },
         },
@@ -259,16 +333,34 @@ export const projects: Project = [
             },
             preview: {
                 mobile: {
-                    sm: "/images/detail/mobile/image-fylo-preview.jpg",
-                    med: "/images/detail/mobile/image-fylo-preview@2x.jpg",
+                    sm: {
+                        1: "/images/detail/mobile/image-fylo-preview-1.jpg",
+                        2: "/images/detail/mobile/image-fylo-preview-2.jpg",
+                    },
+                    med: {
+                        1: "/images/detail/mobile/image-fylo-preview-1@2x.jpg",
+                        2: "/images/detail/mobile/image-fylo-preview-2@2x.jpg",
+                    },
                 },
                 tablet: {
-                    med: "/images/detail/tablet/image-fylo-preview.jpg",
-                    lg: "/images/detail/tablet/image-fylo-preview@2x.jpg",
+                    med: {
+                        1: "/images/detail/tablet/image-fylo-preview-1.jpg",
+                        2: "/images/detail/tablet/image-fylo-preview-2.jpg",
+                    },
+                    lg: {
+                        1: "/images/detail/tablet/image-fylo-preview-1@2x.jpg",
+                        2: "/images/detail/tablet/image-fylo-preview-2@2x.jpg",
+                    },
                 },
                 desktop: {
-                    med: "/images/detail/desktop/image-fylo-preview.jpg",
-                    lg: "/images/detail/desktop/image-fylo-preview@2x.jpg",
+                    med: {
+                        1: "/images/detail/desktop/image-fylo-preview-1.jpg",
+                        2: "/images/detail/desktop/image-fylo-preview-2.jpg",
+                    },
+                    lg: {
+                        1: "/images/detail/desktop/image-fylo-preview-1@2x.jpg",
+                        2: "/images/detail/desktop/image-fylo-preview-2@2x.jpg",
+                    },
                 },
             },
         },
