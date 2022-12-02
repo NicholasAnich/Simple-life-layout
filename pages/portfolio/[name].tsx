@@ -2,6 +2,7 @@ import { projects } from "../../data";
 import Link from "next/link";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { Project } from "../../lib/types";
+import Reachout from "../../components/reachout";
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const projectList = projects.filter((p) => p.projectName === params.name);
@@ -22,7 +23,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 const Project = ({ projectList }: { projectList: Project }) => {
-    const { id, projectName, type, engineer, languages, background, summary, images, details }: Project = projectList;
+    const { id, projectName, type, engineer, languages, background, summary, images, details } = projectList;
     let next = id + 1;
     let prev = id - 1;
 
@@ -90,6 +91,7 @@ const Project = ({ projectList }: { projectList: Project }) => {
                     </Link>
                 </div>
             </div>
+            <Reachout />
         </>
     );
 };

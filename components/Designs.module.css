@@ -1,8 +1,4 @@
-.container {
-    min-height: 100%;
-}
-
-/* .body::before,
+.body::before,
 .body::after {
     content: "";
     display: block;
@@ -28,7 +24,7 @@
 .summary {
     font-size: 15px;
     line-height: 2;
-    margin-bottom: 54px;
+    margin-bottom: 24px;
 }
 
 .images {
@@ -52,4 +48,4 @@
     color: white;
     background-color: #33323d;
     opacity: 1;
-} */
+}
