@@ -2,6 +2,17 @@
     min-height: 100%;
 }
 
+.project {
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* display: flex;
+    flex-direction: row; */
+}
+
+.project:nth-child(even) {
+    /* border: 1px solid #000; */
+}
+
 /* .body::before,
 .body::after {
     content: "";
