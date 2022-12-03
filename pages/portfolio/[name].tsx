@@ -57,10 +57,8 @@ const Project = ({ projectList }: { projectList: Project }) => {
                 <img className={styles.image} src={hero.mobile.sm} alt="" />
             </picture>
             <div className={styles.summaryContainer}>
-                <div>
-                    <h1 className={styles.title}>{projectName}</h1>
-                    <p className={styles.summary}>{summary}</p>
-                </div>
+                <h1 className={styles.title}>{projectName}</h1>
+                <p className={styles.summary}>{summary}</p>
 
                 <div className={styles.metaContainer}>
                     <span className={styles.projectType}>
@@ -76,14 +74,18 @@ const Project = ({ projectList }: { projectList: Project }) => {
                 <h3 className={styles.subTitle}>Project Background</h3>
                 <p className={styles.background}>{background}</p>
             </div>
+            <h3 className={styles.previewTitle}>Static Previews</h3>
             <div className={styles.previewsContainer}>
-                <h3 className={styles.previewTitle}>Static Previews</h3>
                 <picture>
-                    <source />
+                    <source srcSet={`${desktopPreview.med[1]} 635w, ${desktopPreview.lg[1]} 1270w`} />
+                    <source srcSet={`${tabletPreview.med[1]} 689w, ${tabletPreview.lg[1]} 1378w`} />
+                    <source srcSet={`${mobilePreview.sm[1]} 313w, ${mobilePreview.med[1]} 626w`} />
                     <img className={styles.previewImage} src={mobilePreview.sm[1]} alt="" />
                 </picture>
                 <picture>
-                    <source />
+                    <source srcSet={`${desktopPreview.med[2]} 635w, ${desktopPreview.lg[2]} 1270w`} />
+                    <source srcSet={`${tabletPreview.med[2]} 689w, ${tabletPreview.lg[2]} 1378w`} />
+                    <source srcSet={`${mobilePreview.sm[2]} 313w, ${mobilePreview.med[2]} 626w`} />
                     <img className={styles.previewImage2} src={mobilePreview.sm[2]} alt="" />
                 </picture>
             </div>

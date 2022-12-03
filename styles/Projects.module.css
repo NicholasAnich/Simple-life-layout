@@ -39,10 +39,6 @@
 
 .projectType {
     display: flex;
-    /* color: #5fb4a2; */
-    /* font-size: 13px; */
-    /* font-weight: 700; */
-    /* line-height: 30px; */
 }
 
 .lng:not(:last-child)::after {
@@ -73,6 +69,12 @@
     font-size: 15px;
     line-height: 30px;
     margin-bottom: 40px;
+}
+
+/* Previews */
+.previewsContainer {
+    display: flex;
+    flex-direction: column;
 }
 
 .previewTitle {
