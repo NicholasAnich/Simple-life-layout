@@ -1,0 +1,149 @@
+.image {
+    margin-bottom: 40px;
+}
+.summaryContainer {
+}
+
+.summaryContainer::before,
+.summaryContainer::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: grey;
+}
+
+.summaryContainer::before {
+    margin-bottom: 24px;
+}
+
+.summaryContainer::after {
+    margin-bottom: 48px;
+}
+
+.title {
+    margin-top: 0;
+}
+
+.summary {
+    font-size: 15px;
+    line-height: 2;
+}
+
+.metaContainer {
+    color: #5fb4a2;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 24px;
+}
+
+.projectType {
+    display: flex;
+    /* color: #5fb4a2; */
+    /* font-size: 13px; */
+    /* font-weight: 700; */
+    /* line-height: 30px; */
+}
+
+.lng:not(:last-child)::after {
+    content: "/ ";
+}
+
+.link {
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.btn {
+    /* display: inline-block; */
+    cursor: pointer;
+    background-color: white;
+    /* margin-bottom: 24px; */
+}
+
+.backgroundContainer {
+}
+
+.subTitle {
+    margin-top: 0;
+    margin-bottom: 28px;
+}
+
+.background {
+    font-size: 15px;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+
+.previewTitle {
+    margin-bottom: 40px;
+}
+
+.previewImage {
+    margin-bottom: 32px;
+}
+
+.previewImage2 {
+    margin-bottom: 64px;
+}
+
+.navContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.projectNav {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    border-top: 1px solid rgb(51, 50, 61, 0.15);
+    border-bottom: 1px solid rgb(51, 50, 61, 0.15);
+}
+
+.navNext {
+    align-items: flex-end;
+    border-left: 1px solid rgb(51, 50, 61, 0.15);
+}
+
+.navBtn {
+    /* display: flex; */
+    /* flex-direction: column; */
+    text-decoration: none;
+    color: #33323d;
+}
+
+.navBtnNext {
+    text-align: end;
+}
+
+.leftArrow,
+.rightArrow {
+    margin-block: 24px 16px;
+}
+
+.leftArrow {
+    /* margin-right: 32px; */
+}
+
+.rightArrow {
+    /* margin-left: 32px; */
+}
+
+.navTitle,
+.navText {
+    margin: 0;
+    padding: 0;
+}
+
+.navTitle {
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    line-height: 36px;
+}
+.navText {
+    margin: 0;
+    margin-bottom: 24px;
+    opacity: 0.5;
+}
