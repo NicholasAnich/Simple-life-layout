@@ -9,7 +9,7 @@
     content: "";
     display: block;
     height: 1px;
-    background-color: grey;
+    background-color: rgb(51, 50, 61, 0.15);
 }
 
 .summaryContainer::before {
@@ -148,4 +148,38 @@
     margin: 0;
     margin-bottom: 24px;
     opacity: 0.5;
+}
+
+@media (min-width: 600px) {
+    .summaryContainer {
+        border-top: 1px solid rgb(51, 50, 61, 0.15);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 33%);
+        /* grid-template-rows: subgrid; */
+    }
+    .title {
+        /* align-self: center; */
+        margin-top: 32px;
+        grid-column: 1 / 2;
+        grid-row: 1;
+    }
+
+    .summary {
+        margin-top: 32px;
+        grid-column: 2;
+        grid-row: 1 / span 3;
+    }
+
+    .metaContainer {
+        grid-row: 2 / 3;
+    }
+
+    .link {
+        grid-row: 3;
+    }
+    .summaryContainer::after,
+    .summaryContainer::before {
+        /* display: none; */
+    }
 }
