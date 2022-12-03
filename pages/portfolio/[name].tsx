@@ -90,13 +90,11 @@ const Project = ({ projectList }: { projectList: Project }) => {
                 </picture>
             </div>
             <div className={styles.navContainer}>
-                <div className={styles.projectNav}>
+                <div className={`${styles.projectNav} ${styles.navPrev}`}>
                     <svg className={styles.leftArrow} xmlns="http://www.w3.org/2000/svg" width="10" height="16">
                         <path fill="none" stroke="#33323D" d="M9 0L1 8l8 8" />
                     </svg>
                     <Link className={`${styles.navBtn} ${styles.navBtnPrev}`} href={`/portfolio/${prevName}`}>
-                        {/* <img className={styles.prev} src="./images/icons/arrow-left.svg" alt="" /> */}
-
                         <h3 className={styles.navTitle}>{prevName}</h3>
                         <p className={styles.navText}>Previous Project</p>
                     </Link>
@@ -108,7 +106,6 @@ const Project = ({ projectList }: { projectList: Project }) => {
                     <Link className={`${styles.navBtn} ${styles.navBtnNext}`} href={`/portfolio/${nextName}`}>
                         <h3 className={styles.navTitle}>{nextName}</h3>
                         <p className={styles.navText}>Next Project</p>
-                        {/* <img className={styles.next} src="./images/icons/arrow-right.svg" alt="" /> */}
                     </Link>
                 </div>
             </div>

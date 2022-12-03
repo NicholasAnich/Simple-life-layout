@@ -156,11 +156,10 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 33%);
-        /* grid-template-rows: subgrid; */
     }
     .title {
-        /* align-self: center; */
         margin-top: 32px;
+        margin-bottom: 16px;
         grid-column: 1 / 2;
         grid-row: 1;
     }
@@ -178,8 +177,40 @@
     .link {
         grid-row: 3;
     }
-    .summaryContainer::after,
-    .summaryContainer::before {
-        /* display: none; */
+
+    /* Nav Buttons */
+
+    .projectNav {
+    }
+
+    .navPrev {
+        /* display: flex; */
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navNext {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        /* justify-content: center; */
+        /* display: grid; */
+        /* grid-template-columns: repeat(2, 1fr); */
+    }
+
+    .leftArrow {
+        margin-right: 32px;
+    }
+    .rightArrow {
+        margin-left: 32px;
+    }
+
+    .navTitle {
+        margin-top: 33px;
+    }
+
+    .navText {
+        margin: 0;
+        margin-bottom: 33px;
     }
 }
