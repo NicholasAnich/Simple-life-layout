@@ -4,6 +4,7 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import { Project } from "../../lib/types";
 import Reachout from "../../components/reachout";
 import styles from "../../styles/Projects.module.css";
+import home from "../../styles/Home.module.css";
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const projectList = projects.filter((p) => p.projectName === params?.name);
@@ -37,7 +38,11 @@ const Project = ({ projectList }: { projectList: Project }) => {
     const nextName = projects[next].projectName;
     const prevName = projects[prev].projectName;
 
-    const languageMeta = languages.map((language: string) => <span key={language}>{language} </span>);
+    const languageMeta = languages.map((language: string) => (
+        <span className={styles.lng} key={language}>
+            {language}{" "}
+        </span>
+    ));
     const mobilePreview = details.preview.mobile;
     const tabletPreview = details.preview.tablet;
     const desktopPreview = details.preview.desktop;
@@ -49,50 +54,59 @@ const Project = ({ projectList }: { projectList: Project }) => {
                 <source media="(min-width: 1000px)" srcSet={`${hero.desktop.med} 1110w, ${hero.desktop.lg} 2220w`} />
                 <source media="(min-width: 600px)" srcSet={`${hero.tablet.med} 689w, ${hero.tablet.lg} 1378w`} />
                 <source srcSet={`${hero.mobile.sm} 311w, ${hero.mobile.med} 622w`} />
-                <img src={hero.mobile.sm} alt="" />
+                <img className={styles.image} src={hero.mobile.sm} alt="" />
             </picture>
-            <div>
+            <div className={styles.summaryContainer}>
                 <div>
-                    <h1>{projectName}</h1>
-                    <p>{summary}</p>
+                    <h1 className={styles.title}>{projectName}</h1>
+                    <p className={styles.summary}>{summary}</p>
                 </div>
 
-                <div>
-                    <span>
+                <div className={styles.metaContainer}>
+                    <span className={styles.projectType}>
                         {type} / {engineer}
                     </span>
-                    {languageMeta}
+                    <span className={styles.languages}>{languageMeta}</span>
                 </div>
-                <Link href="#">
-                    <button>Visit Website</button>
+                <Link className={styles.link} href="#">
+                    <button className={`${home.linkBtn} ${styles.btn}`}>Visit Website</button>
                 </Link>
             </div>
-            <div>
-                <h3>Project Background</h3>
-                <p>{background}</p>
+            <div className={styles.backgroundContainer}>
+                <h3 className={styles.subTitle}>Project Background</h3>
+                <p className={styles.background}>{background}</p>
             </div>
-            <div>
-                <h3>Static Previews</h3>
+            <div className={styles.previewsContainer}>
+                <h3 className={styles.previewTitle}>Static Previews</h3>
                 <picture>
                     <source />
-                    <img src={mobilePreview.sm[1]} alt="" />
+                    <img className={styles.previewImage} src={mobilePreview.sm[1]} alt="" />
                 </picture>
                 <picture>
                     <source />
-                    <img src={mobilePreview.sm[2]} alt="" />
+                    <img className={styles.previewImage2} src={mobilePreview.sm[2]} alt="" />
                 </picture>
             </div>
-            <div>
-                <div>
-                    <Link href={`/portfolio/${prevName}`}>
-                        <p>{prevName}</p>
-                        <p>Previous Project</p>
+            <div className={styles.navContainer}>
+                <div className={styles.projectNav}>
+                    <svg className={styles.leftArrow} xmlns="http://www.w3.org/2000/svg" width="10" height="16">
+                        <path fill="none" stroke="#33323D" d="M9 0L1 8l8 8" />
+                    </svg>
+                    <Link className={`${styles.navBtn} ${styles.navBtnPrev}`} href={`/portfolio/${prevName}`}>
+                        {/* <img className={styles.prev} src="./images/icons/arrow-left.svg" alt="" /> */}
+
+                        <h3 className={styles.navTitle}>{prevName}</h3>
+                        <p className={styles.navText}>Previous Project</p>
                     </Link>
                 </div>
-                <div>
-                    <Link href={`/portfolio/${nextName}`}>
-                        <p>{nextName}</p>
-                        <p>Next Project</p>
+                <div className={`${styles.projectNav} ${styles.navNext}`}>
+                    <svg className={styles.rightArrow} xmlns="http://www.w3.org/2000/svg" width="10" height="16">
+                        <path fill="none" stroke="#33323D" d="M1 0l8 8-8 8" />
+                    </svg>
+                    <Link className={`${styles.navBtn} ${styles.navBtnNext}`} href={`/portfolio/${nextName}`}>
+                        <h3 className={styles.navTitle}>{nextName}</h3>
+                        <p className={styles.navText}>Next Project</p>
+                        {/* <img className={styles.next} src="./images/icons/arrow-right.svg" alt="" /> */}
                     </Link>
                 </div>
             </div>
