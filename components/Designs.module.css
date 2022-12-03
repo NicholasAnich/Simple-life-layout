@@ -1,0 +1,149 @@
+.body::before,
+.body::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #33323d;
+    opacity: 0.2;
+}
+
+.body::before {
+    margin-top: 32px;
+    margin-bottom: 25px;
+}
+
+.body::after {
+    margin-top: 25px;
+    margin-bottom: 72px;
+}
+
+.title {
+    margin: 0;
+}
+
+.summary {
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 24px;
+}
+
+.images {
+    width: 100%;
+}
+
+.linkBtn {
+    display: inline-block;
+    padding: 1.4166em 2.6666em;
+    font-size: 12px;
+    color: #33323d;
+    border: 1px solid #33323d;
+    opacity: 0.8;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.linkBtn:hover,
+.linkBtn:focus {
+    color: white;
+    background-color: #33323d;
+    opacity: 1;
+}
+
+@media (min-width: 600px) {
+    .container {
+        /* border: 1px solid magenta; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* grid-area: "a b"; */
+        /* justify-items: stretch; */
+        gap: 69px;
+        margin-bottom: 5.3333rem;
+    }
+
+    .body {
+        max-width: 350px;
+    }
+
+    .reversed > .imageContainer {
+        /* border: 1px solid #000; */
+        /* grid-area: b; */
+        grid-column: 2 / 3;
+    }
+    .reversed > .body {
+        /* grid-area: a; */
+        grid-column: 1 / 2;
+        grid-row: 1;
+    }
+
+    .body::before {
+        margin-top: 0;
+    }
+
+    .body::after {
+        margin-bottom: 0;
+    }
+
+    .imageContainer {
+        align-self: center;
+    }
+
+    .images {
+        min-width: 200px;
+        /* max-width: 354px;g */
+    }
+}
+
+@media (min-width: 1000px) {
+    .container {
+        margin-top: 40px;
+        display: grid;
+        /* grid-template-columns: 540px 444px; */
+        /* grid-template-columns: 2fr 1fr; */
+        grid-template-columns: 54fr 35fr;
+        gap: 125px;
+    }
+
+    .imageContainer {
+        align-self: initial;
+    }
+
+    .body {
+        max-height: 500px;
+    }
+
+    .body::before {
+        margin-bottom: 103px;
+    }
+
+    .body::after {
+        margin-top: 103px;
+    }
+
+    .reversed {
+        /* grid-template-columns: 444px 540px; */
+        /* grid-template-columns: 1fr 2fr; */
+        grid-template-columns: 35fr 54fr;
+    }
+
+    .summary {
+        font-size: 16px;
+        margin-top: 0;
+        /* line-height: 1.875; */
+    }
+
+    .title {
+        margin-bottom: 28px;
+    }
+
+    .imageContainer {
+        align-self: initial;
+    }
+
+    .images {
+        display: block;
+        width: 100%;
+        max-width: 540px;
+        max-height: 500px;
+    }
+}

@@ -27,7 +27,7 @@ export default function Portfolio({ projectList }: { projectList: Project }) {
         } = project;
 
         return (
-            <div key={`${projectName}${i}`}>
+            <div className={portfolio.project} key={`${projectName}${i}`}>
                 <Designs key={id} {...project} />
             </div>
         );

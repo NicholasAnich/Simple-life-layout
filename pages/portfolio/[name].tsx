@@ -2,9 +2,11 @@ import { projects } from "../../data";
 import Link from "next/link";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { Project } from "../../lib/types";
+import Reachout from "../../components/reachout";
+import styles from "../../styles/Projects.module.css";
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    const projectList = projects.filter((p) => p.projectName === params.name);
+    const projectList = projects.filter((p) => p.projectName === params?.name);
     return {
         props: {
             projectList: projectList[0],
@@ -22,7 +24,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 const Project = ({ projectList }: { projectList: Project }) => {
-    const { id, projectName, type, engineer, languages, background, summary, images, details }: Project = projectList;
+    const { id, projectName, type, engineer, languages, background, summary, images, details } = projectList;
     let next = id + 1;
     let prev = id - 1;
 
@@ -39,28 +41,32 @@ const Project = ({ projectList }: { projectList: Project }) => {
     const mobilePreview = details.preview.mobile;
     const tabletPreview = details.preview.tablet;
     const desktopPreview = details.preview.desktop;
-
-    // console.log(mobilePreview.sm);
+    const hero = details.hero;
+    console.log(hero.tablet.med);
     return (
         <>
             <picture>
-                <source />
-                <img src={details.hero.mobile.sm} alt="" />
+                <source media="(min-width: 1000px)" srcSet={`${hero.desktop.med} 1110w, ${hero.desktop.lg} 2220w`} />
+                <source media="(min-width: 600px)" srcSet={`${hero.tablet.med} 689w, ${hero.tablet.lg} 1378w`} />
+                <source srcSet={`${hero.mobile.sm} 311w, ${hero.mobile.med} 622w`} />
+                <img src={hero.mobile.sm} alt="" />
             </picture>
             <div>
-                <h1>{projectName}</h1>
-                <p>{summary}</p>
-            </div>
+                <div>
+                    <h1>{projectName}</h1>
+                    <p>{summary}</p>
+                </div>
 
-            <div>
-                <span>
-                    {type} / {engineer}
-                </span>
-                {languageMeta}
+                <div>
+                    <span>
+                        {type} / {engineer}
+                    </span>
+                    {languageMeta}
+                </div>
+                <Link href="#">
+                    <button>Visit Website</button>
+                </Link>
             </div>
-            <Link href="#">
-                <button>Visit Website</button>
-            </Link>
             <div>
                 <h3>Project Background</h3>
                 <p>{background}</p>
@@ -90,6 +96,7 @@ const Project = ({ projectList }: { projectList: Project }) => {
                     </Link>
                 </div>
             </div>
+            <Reachout />
         </>
     );
 };

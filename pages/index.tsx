@@ -35,16 +35,15 @@ export default function Home() {
             <div className={styles.aboutMeSection}>
                 <div className={styles.author}>
                     <picture>
-                        {/* <source srcSet="/images/homepage/desktop/image-homepage-profile@2x.jpg" media="(min-width: 75em)" /> */}
                         <source
                             media="(min-width: 62.5em)"
-                            srcSet="/images/homepage/desktop/image-homepage-profile.jpg, /images/homepage/desktop/image-homepage-profile@2x.jpg 2x"
+                            srcSet="/images/homepage/desktop/image-homepage-profile.jpg, /images/homepage/desktop/image-homepage-profile@2x.jpg"
                         />
-                        {/* <source srcSet="/images/homepage/tablet/image-homepage-profile@2x.jpg" media="(min-width: 53.125em)" /> */}
                         <source
                             media="(min-width: 37.5em)"
-                            srcSet="/images/homepage/tablet/image-homepage-profile.jpg, /images/homepage/tablet/image-homepage-profile@2x 2x"
+                            srcSet="/images/homepage/tablet/image-homepage-profile.jpg, /images/homepage/tablet/image-homepage-profile@2x.jpg"
                         />
+                        <source srcSet="/images/homepage/mobile/image-homepage-profile.jpg 311w, /images/homepage/mobile/image-homepage-profile@2x.jpg 622w" />
                         <img className={styles.authorImg} src="/images/homepage/mobile/image-homepage-profile.jpg" alt="Alex Spencer" />
                     </picture>
                 </div>
