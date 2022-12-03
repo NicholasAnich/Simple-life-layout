@@ -10,7 +10,7 @@
     justify-content: center;
 
     padding: 3.5em 0px;
-    max-width: 1110px;
+    max-width: 1111px;
 }
 
 .listItem:hover,
@@ -99,5 +99,11 @@
 @media (min-width: 62.5em) {
     .list {
         gap: 42px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .body {
+        padding: 0;
     }
 }

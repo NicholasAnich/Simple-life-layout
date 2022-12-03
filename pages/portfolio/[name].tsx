@@ -56,38 +56,46 @@ const Project = ({ projectList }: { projectList: Project }) => {
                 <source srcSet={`${hero.mobile.sm} 311w, ${hero.mobile.med} 622w`} />
                 <img className={styles.image} src={hero.mobile.sm} alt="" />
             </picture>
-            <div className={styles.summaryContainer}>
-                <h1 className={styles.title}>{projectName}</h1>
-                <p className={styles.summary}>{summary}</p>
+            <div className={styles.projectContainer}>
+                <div className={styles.summaryContainer}>
+                    <h1 className={styles.title}>{projectName}</h1>
+                    <p className={styles.summary}>{summary}</p>
 
-                <div className={styles.metaContainer}>
-                    <span className={styles.projectType}>
-                        {type} / {engineer}
-                    </span>
-                    <span className={styles.languages}>{languageMeta}</span>
+                    <div className={styles.metaContainer}>
+                        <span className={styles.projectType}>
+                            {type} / {engineer}
+                        </span>
+                        <span className={styles.languages}>{languageMeta}</span>
+                    </div>
+                    <Link className={styles.link} href="#">
+                        <button className={`${home.linkBtn} ${styles.btn}`}>Visit Website</button>
+                    </Link>
                 </div>
-                <Link className={styles.link} href="#">
-                    <button className={`${home.linkBtn} ${styles.btn}`}>Visit Website</button>
-                </Link>
-            </div>
-            <div className={styles.backgroundContainer}>
-                <h3 className={styles.subTitle}>Project Background</h3>
-                <p className={styles.background}>{background}</p>
-            </div>
-            <h3 className={styles.previewTitle}>Static Previews</h3>
-            <div className={styles.previewsContainer}>
-                <picture>
-                    <source srcSet={`${desktopPreview.med[1]} 635w, ${desktopPreview.lg[1]} 1270w`} />
-                    <source srcSet={`${tabletPreview.med[1]} 689w, ${tabletPreview.lg[1]} 1378w`} />
-                    <source srcSet={`${mobilePreview.sm[1]} 313w, ${mobilePreview.med[1]} 626w`} />
-                    <img className={styles.previewImage} src={mobilePreview.sm[1]} alt="" />
-                </picture>
-                <picture>
-                    <source srcSet={`${desktopPreview.med[2]} 635w, ${desktopPreview.lg[2]} 1270w`} />
-                    <source srcSet={`${tabletPreview.med[2]} 689w, ${tabletPreview.lg[2]} 1378w`} />
-                    <source srcSet={`${mobilePreview.sm[2]} 313w, ${mobilePreview.med[2]} 626w`} />
-                    <img className={styles.previewImage2} src={mobilePreview.sm[2]} alt="" />
-                </picture>
+                <div className={styles.backgroundPreviewContainer}>
+                    <div className={styles.backgroundContainer}>
+                        <h3 className={styles.subTitle}>Project Background</h3>
+                        <p className={styles.background}>{background}</p>
+                    </div>
+                    <div className={styles.staticWrapper}>
+                        <div className={styles.staticPreviewContainer}>
+                            <h3 className={styles.previewTitle}>Static Previews</h3>
+                            <div className={styles.previewsContainer}>
+                                <picture>
+                                    <source srcSet={`${desktopPreview.med[1]} 635w, ${desktopPreview.lg[1]} 1270w`} />
+                                    <source srcSet={`${tabletPreview.med[1]} 689w, ${tabletPreview.lg[1]} 1378w`} />
+                                    <source srcSet={`${mobilePreview.sm[1]} 313w, ${mobilePreview.med[1]} 626w`} />
+                                    <img className={styles.previewImage} src={mobilePreview.sm[1]} alt="" />
+                                </picture>
+                                <picture>
+                                    <source srcSet={`${desktopPreview.med[2]} 635w, ${desktopPreview.lg[2]} 1270w`} />
+                                    <source srcSet={`${tabletPreview.med[2]} 689w, ${tabletPreview.lg[2]} 1378w`} />
+                                    <source srcSet={`${mobilePreview.sm[2]} 313w, ${mobilePreview.med[2]} 626w`} />
+                                    <img className={styles.previewImage2} src={mobilePreview.sm[2]} alt="" />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div className={styles.navContainer}>
                 <div className={`${styles.projectNav} ${styles.navPrev}`}>

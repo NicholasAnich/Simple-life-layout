@@ -61,4 +61,7 @@
 }
 
 @media (min-width: 1000px) {
+    .contactMe {
+        margin-block: 115px;
+    }
 }
