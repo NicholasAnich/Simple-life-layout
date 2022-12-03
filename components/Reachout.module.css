@@ -38,6 +38,7 @@
         margin: 150px 0;
     }
     .contactTitle {
+        text-align: initial;
         min-width: 350px;
         gap: 32px;
     }
@@ -61,4 +62,7 @@
 }
 
 @media (min-width: 1000px) {
+    .contactMe {
+        margin-block: 115px;
+    }
 }

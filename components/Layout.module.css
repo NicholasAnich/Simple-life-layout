@@ -15,7 +15,9 @@
     margin: 0 auto;
 
     width: 100%;
-    max-width: 69.375rem;
+    max-width: 69.4375rem;
+    max-width: 74rem;
+    /* max-width: 69.375rem; */
 }
 
 @media (medium) {

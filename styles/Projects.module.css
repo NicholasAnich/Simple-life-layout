@@ -9,7 +9,7 @@
     content: "";
     display: block;
     height: 1px;
-    background-color: grey;
+    background-color: rgb(51, 50, 61, 0.15);
 }
 
 .summaryContainer::before {
@@ -39,10 +39,6 @@
 
 .projectType {
     display: flex;
-    /* color: #5fb4a2; */
-    /* font-size: 13px; */
-    /* font-weight: 700; */
-    /* line-height: 30px; */
 }
 
 .lng:not(:last-child)::after {
@@ -73,6 +69,12 @@
     font-size: 15px;
     line-height: 30px;
     margin-bottom: 40px;
+}
+
+/* Previews */
+.previewsContainer {
+    display: flex;
+    flex-direction: column;
 }
 
 .previewTitle {
@@ -146,4 +148,100 @@
     margin: 0;
     margin-bottom: 24px;
     opacity: 0.5;
+}
+
+@media (min-width: 600px) {
+    .summaryContainer {
+        border-top: 1px solid rgb(51, 50, 61, 0.15);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 33%);
+    }
+    .title {
+        margin-top: 32px;
+        margin-bottom: 16px;
+        grid-column: 1 / 2;
+        grid-row: 1;
+    }
+
+    .summary {
+        margin-top: 32px;
+        grid-column: 2;
+        grid-row: 1 / span 3;
+    }
+
+    .metaContainer {
+        grid-row: 2 / 3;
+    }
+
+    .link {
+        grid-row: 3;
+    }
+
+    /* Nav Buttons */
+
+    .projectNav {
+    }
+
+    .navPrev {
+        /* display: flex; */
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navNext {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        /* justify-content: center; */
+        /* display: grid; */
+        /* grid-template-columns: repeat(2, 1fr); */
+    }
+
+    .leftArrow {
+        margin-right: 32px;
+    }
+    .rightArrow {
+        margin-left: 32px;
+    }
+
+    .navTitle {
+        margin-top: 33px;
+    }
+
+    .navText {
+        margin: 0;
+        margin-bottom: 33px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .projectContainer {
+        display: grid;
+        /* grid-template-columns: 350px 1fr; */
+        /* grid-template-columns: 1.3fr 1.9fr; */
+        /* grid-template-columns: 2fr 4fr; */
+        grid-template-columns: 1.3fr 2.5fr;
+        margin-bottom: 64px;
+
+        /* grid-template-columns: fr 635px; */
+        gap: 8.33em;
+    }
+    .summaryContainer {
+        display: initial;
+        border-top: none;
+    }
+
+    .previewImage,
+    .previewImage2 {
+        object-fit: initial;
+        height: auto;
+    }
+
+    .previewImage2 {
+        margin-bottom: 0;
+    }
+    /* .staticPreviewContainer {
+        grid-column: 2;
+    } */
 }
