@@ -114,8 +114,8 @@ Form
     }
     .introContainer {
         display: grid;
-        /* grid-template-columns: 485px 635px; */
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 350px 635px;
+        column-gap: 125px;
         grid-template-rows: 1fr 48px;
     }
 
@@ -125,9 +125,7 @@ Form
     }
 
     .body {
-        /* padding: 1em; */
         margin-top: 48px;
-        padding-inline: 2em;
         grid-column: 2;
         grid-row: 1;
     }
@@ -135,53 +133,23 @@ Form
     .social {
         grid-column: 2;
         align-self: start;
-        padding-inline: 2em;
+        margin: 0;
     }
 
     .form {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 350px 635px;
+        column-gap: 125px;
         margin-top: 48px;
-        /* justify-content: space-between; */
-        /* display: grid;
-        grid-template-columns: 1fr 2fr; */
-        /* grid-template-rows: 1fr 48px; */
     }
 
     .formTitle {
         margin: 0;
-        margin-right: 4.2em;
-        /* margin-right: 1em; */
-        /* justify-self: start; */
-        /* align-self: end; */
-        /* padding: 2em; */
-        /* margin: 0; */
     }
 
     .formContainer {
-        margin-top: 0.8em;
         display: flex;
         flex-direction: column;
         flex-grow: 1;
-    }
-
-    .input,
-    .label {
-        /* flex-grow: 1; */
-        /* padding: 2em; */
-        /* grid-column: 2; */
-        /* margin-left: 2em; */
-        /* padding-inline: 2em; */
-        /* justify-self: start; */
-    }
-
-    .label {
-        /* justify-self: start; */
-        /* align-self: baseline; */
-    }
-
-    .btn {
-        /* grid-column: 2; */
-        /* margin-left: 2em; */
     }
 }
