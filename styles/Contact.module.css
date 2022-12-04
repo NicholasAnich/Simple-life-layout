@@ -114,7 +114,7 @@ Form
     }
     .introContainer {
         display: grid;
-        grid-template-columns: 350px 635px;
+        grid-template-columns: 350px minmax(350px, 635px);
         column-gap: 125px;
         grid-template-rows: 1fr 48px;
     }
@@ -138,7 +138,7 @@ Form
 
     .form {
         display: grid;
-        grid-template-columns: 350px 635px;
+        grid-template-columns: 350px minmax(350px, 635px);
         column-gap: 125px;
         margin-top: 48px;
     }

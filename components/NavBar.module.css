@@ -139,8 +139,18 @@
 
 @media (min-width: 1000px) {
     .container {
-        padding: 0;
+        /* padding: 0; */
         margin: 4em 0px 3.375em 0px;
+    }
+
+    .body {
+        /* padding: 0; */
+    }
+}
+
+@media (min-width: 1180px) {
+    .container {
+        padding: 0;
     }
 
     .body {
