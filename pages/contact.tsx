@@ -16,15 +16,15 @@ export default function Contact() {
         message: "",
     });
 
-    function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    function handleChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
         setUser({
             ...user,
-            [e.target.name]: e.target.value,
+            [event.target.name]: event.target.value,
         });
     }
 
-    function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
-        e.preventDefault();
+    function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
+        event.preventDefault();
         console.log(user);
 
         alert("Message has been sent! Thank You!");
@@ -131,7 +131,7 @@ export default function Contact() {
                             value={user.message || ""}
                             required
                         />
-                        <button className={contact.btn} type="submit" onSubmit={handleSubmit}>
+                        <button className={contact.btn} type="submit">
                             Send Message
                         </button>
                     </div>
