@@ -47,9 +47,8 @@ const Project = ({ projectList }: { projectList: Project }) => {
     const tabletPreview = details.preview.tablet;
     const desktopPreview = details.preview.desktop;
     const hero = details.hero;
-    console.log(hero.tablet.med);
     return (
-        <>
+        <div className={styles.container}>
             <picture>
                 <source media="(min-width: 1000px)" srcSet={`${hero.desktop.med} 1110w, ${hero.desktop.lg} 2220w`} />
                 <source media="(min-width: 600px)" srcSet={`${hero.tablet.med} 689w, ${hero.tablet.lg} 1378w`} />
@@ -118,7 +117,7 @@ const Project = ({ projectList }: { projectList: Project }) => {
                 </div>
             </div>
             <Reachout />
-        </>
+        </div>
     );
 };
 

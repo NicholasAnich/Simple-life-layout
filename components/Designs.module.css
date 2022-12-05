@@ -9,7 +9,7 @@
 
 .body::before {
     margin-top: 32px;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 }
 
 .body::after {
@@ -23,8 +23,8 @@
 
 .summary {
     font-size: 15px;
-    line-height: 2;
-    margin-bottom: 24px;
+    line-height: 30px;
+    margin-bottom: 54px;
 }
 
 .images {
@@ -52,13 +52,17 @@
 
 @media (min-width: 600px) {
     .container {
-        /* border: 1px solid magenta; */
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        /* grid-area: "a b"; */
-        /* justify-items: stretch; */
+        /* grid-template-columns: 1fr 1fr; */
+        /* grid-template-columns: minmax(239px, 339px) minmax(181px, 281px); */
+        /* grid-template-columns: minmax(239px, 339px) minmax(181px, 281px); */
+        grid-template-columns: minmax(239px, 440px) minmax(181px, 415px);
         gap: 69px;
-        margin-bottom: 5.3333rem;
+        /* margin-bottom: 5.3333rem; */
+        margin-bottom: 80px;
+    }
+    .reversed {
+        grid-template-columns: minmax(181px, 415px) minmax(239px, 440px);
     }
 
     .body {
@@ -79,15 +83,26 @@
 
     .body::before {
         margin-top: 0;
+        margin-bottom: 32px;
     }
 
     .body::after {
         margin-bottom: 0;
+        margin-bottom: 50px;
     }
 
     .body::before,
     .body::after {
         height: 0;
+    }
+
+    .title {
+        line-height: 42px;
+        margin-bottom: 29px;
+    }
+
+    .summary {
+        margin-bottom: 35px;
     }
 
     .imageContainer {

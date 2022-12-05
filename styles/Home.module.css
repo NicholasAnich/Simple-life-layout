@@ -3,6 +3,7 @@
 
 .main {
     min-height: 100%;
+    margin-top: 40px;
 }
 
 /* IMAGES */
@@ -21,6 +22,10 @@
 }
 
 /* Author */
+.aboutMeSection {
+    margin-bottom: 115px;
+}
+
 .aboutMe::before {
     content: "";
     display: block;
@@ -157,6 +162,9 @@
 }
 /* Tabelet */
 @media (medium) {
+    .main {
+        margin-top: 47px;
+    }
     .heroSection {
         position: relative;
         margin-bottom: 96px;
@@ -199,6 +207,7 @@
         grid-template-columns: minmax(250px, 281px) minmax(250px, 339px);
         gap: 4.375em;
         justify-content: space-between;
+        margin-bottom: 96px;
     }
 
     .aboutMe::before {
@@ -214,6 +223,9 @@
 
 /* Desktop */
 @media (large) {
+    .main {
+        margin-top: 54px;
+    }
     .heroImage {
         min-height: 600px;
         background-image: url("../public/images/homepage/desktop/image-homepage-hero.jpg");
@@ -236,6 +248,7 @@
     .aboutMeSection {
         grid-template-columns: minmax(400px, 540px) minmax(250px, 350px);
         margin-top: 150px;
+        margin-bottom: 150px;
         gap: 125px;
     }
 
