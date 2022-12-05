@@ -1,8 +1,40 @@
 import Head from "next/head";
 import Link from "next/link";
+import React, { useState } from "react";
 import contact from "../styles/Contact.module.css";
 
+interface UserFormState {
+    firstName: string;
+    email: string;
+    message: string;
+}
+
 export default function Contact() {
+    const [user, setUser] = useState<UserFormState>({
+        firstName: "",
+        email: "",
+        message: "",
+    });
+
+    function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+        setUser({
+            ...user,
+            [e.target.name]: e.target.value,
+        });
+    }
+
+    function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
+        e.preventDefault();
+        console.log(user);
+
+        alert("Message has been sent! Thank You!");
+        setUser({
+            firstName: "",
+            email: "",
+            message: "",
+        });
+    }
+
     return (
         <div>
             <Head>
@@ -58,32 +90,52 @@ export default function Contact() {
                         </ul>
                     </div>
                 </div>
-                <div className={contact.form}>
+                <form className={contact.form} onSubmit={handleSubmit}>
                     <h2 className={contact.formTitle}>Contact Me</h2>
                     <div className={contact.formContainer}>
                         <label className={contact.label} htmlFor="fname">
                             Name
                         </label>
-                        <input className={contact.input} id="fname" placeholder="Jane Appleseed" type="text" required />
+                        <input
+                            className={contact.input}
+                            id="fname"
+                            placeholder="Jane Appleseed"
+                            type="text"
+                            name="firstName"
+                            onChange={handleChange}
+                            value={user.firstName || ""}
+                            required
+                        />
                         <label className={contact.label} htmlFor="email">
                             Email Address
                         </label>
-                        <input className={contact.input} id="email" placeholder="email@example.com" type="email" required />
+                        <input
+                            className={contact.input}
+                            id="email"
+                            placeholder="email@example.com"
+                            type="email"
+                            name="email"
+                            onChange={handleChange}
+                            value={user.email || ""}
+                            required
+                        />
                         <label className={contact.label} htmlFor="message">
                             Message
                         </label>
                         <textarea
                             className={`${contact.input} ${contact.message}`}
                             id="message"
-                            // type="textarea"
                             placeholder="How can I help?"
+                            name="message"
+                            onChange={handleChange}
+                            value={user.message || ""}
                             required
                         />
-                        <button className={contact.btn} type="submit">
+                        <button className={contact.btn} type="submit" onSubmit={handleSubmit}>
                             Send Message
                         </button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     );
