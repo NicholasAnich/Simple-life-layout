@@ -2,8 +2,31 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Reachout from "../components/reachout";
+import { useState } from "react";
+
+interface User {
+    firstName: string;
+    email: string;
+    message: string;
+}
+
+interface AddMessage {
+    handleMessages: (user: User) => void;
+}
 
 export default function Home() {
+    const [userList, setUserList] = useState<User[]>([]);
+
+    const handleMessages = (user: User) => {
+        setUserList([user, ...userList]);
+        console.log("Successfully Added...");
+        console.log({ userList });
+    };
+
+    const functionProps = {
+        addMessage: handleMessages,
+    };
+
     return (
         <div className={styles.main}>
             <Head>
@@ -61,7 +84,7 @@ export default function Home() {
                     </Link>
                 </div>
             </div>
-            <Reachout />
+            <Reachout handleMessages={handleMessages} />
         </div>
     );
 }
