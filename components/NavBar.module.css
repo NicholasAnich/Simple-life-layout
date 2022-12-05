@@ -1,10 +1,10 @@
 .container {
+    grid-area: header;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 0;
-    /* margin: 2em 0 2.5em 0; */
     margin-top: 32px;
+    grid-area: header;
 }
 
 .body {
@@ -12,10 +12,7 @@
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
-
-    max-width: 1111px;
-    margin: 0;
-    padding: 0 2.4375em;
+    margin-inline: 32px;
 }
 
 .img {
@@ -114,8 +111,6 @@
 
 @media (min-width: 600px) {
     .container {
-        /* margin: 4em 0 2.9375em 0; */
-        /* margin-bottom: 64px; */
         margin-top: 64px;
     }
 
@@ -142,14 +137,9 @@
 
 @media (min-width: 1000px) {
     .container {
-        /* padding: 0; */
-        /* margin: 4em 0px 3.375em 0px; */
-        /* margin-top: 64px; */
-        /* margin-bottom: 94px; */
     }
 
     .body {
-        /* padding: 0; */
     }
 }
 
