@@ -9,7 +9,7 @@
 
 .body::before {
     margin-top: 32px;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 }
 
 .body::after {
@@ -23,8 +23,8 @@
 
 .summary {
     font-size: 15px;
-    line-height: 2;
-    margin-bottom: 24px;
+    line-height: 30px;
+    margin-bottom: 54px;
 }
 
 .images {
@@ -52,17 +52,22 @@
 
 @media (min-width: 600px) {
     .container {
-        /* border: 1px solid magenta; */
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        /* grid-area: "a b"; */
-        /* justify-items: stretch; */
+        /* grid-template-columns: 1fr 1fr; */
+        /* grid-template-columns: minmax(239px, 339px) minmax(181px, 281px); */
+        /* grid-template-columns: minmax(239px, 339px) minmax(181px, 281px); */
+        grid-template-columns: minmax(239px, 440px) minmax(181px, 415px);
         gap: 69px;
-        margin-bottom: 5.3333rem;
+        /* margin-bottom: 5.3333rem; */
+        margin-bottom: 80px;
+    }
+    .reversed {
+        grid-template-columns: minmax(181px, 415px) minmax(239px, 440px);
     }
 
     .body {
         max-width: 350px;
+        border-block: 1px solid rgb(51, 50, 61, 0.2);
     }
 
     .reversed > .imageContainer {
@@ -78,10 +83,26 @@
 
     .body::before {
         margin-top: 0;
+        margin-bottom: 32px;
     }
 
     .body::after {
         margin-bottom: 0;
+        margin-bottom: 50px;
+    }
+
+    .body::before,
+    .body::after {
+        height: 0;
+    }
+
+    .title {
+        line-height: 42px;
+        margin-bottom: 29px;
+    }
+
+    .summary {
+        margin-bottom: 35px;
     }
 
     .imageContainer {
@@ -90,7 +111,6 @@
 
     .images {
         min-width: 200px;
-        /* max-width: 354px;g */
     }
 }
 
@@ -98,9 +118,7 @@
     .container {
         margin-top: 40px;
         display: grid;
-        /* grid-template-columns: 540px 444px; */
-        /* grid-template-columns: 2fr 1fr; */
-        grid-template-columns: 54fr 35fr;
+        grid-template-columns: minmax(440px, 540px) minmax(250px, 350px);
         gap: 125px;
     }
 
@@ -121,15 +139,13 @@
     }
 
     .reversed {
-        /* grid-template-columns: 444px 540px; */
-        /* grid-template-columns: 1fr 2fr; */
-        grid-template-columns: 35fr 54fr;
+        grid-template-columns: minmax(250px, 350px) minmax(440px, 540px);
+        justify-content: end;
     }
 
     .summary {
         font-size: 16px;
         margin-top: 0;
-        /* line-height: 1.875; */
     }
 
     .title {

@@ -1,6 +1,9 @@
 .container {
     background-color: #33323d;
     min-height: 354px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .body {
@@ -11,6 +14,7 @@
 
     padding: 3.5em 0px;
     max-width: 1111px;
+    max-height: 242px;
 }
 
 .listItem:hover,
@@ -103,6 +107,9 @@
 }
 
 @media (min-width: 1000px) {
+}
+
+@media (min-width: 1180px) {
     .body {
         padding: 0;
     }
