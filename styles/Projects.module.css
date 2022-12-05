@@ -230,6 +230,10 @@
         border-top: none;
     }
 
+    .previewTitle {
+        margin-bottom: 28px;
+    }
+
     .previewImage,
     .previewImage2 {
         object-fit: initial;
