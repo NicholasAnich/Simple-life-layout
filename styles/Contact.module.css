@@ -87,6 +87,26 @@ Form
     border: none;
 }
 
+.input:focus {
+    outline: none;
+    border: 1px solid #5fb482;
+}
+.input:focus::placeholder {
+    content: "";
+    color: transparent;
+}
+
+.hasError {
+    border: 1px solid red;
+}
+
+/* .input:required:invalid {
+    border: 1px solid red;
+}
+.input:required:focus {
+    border: 1px solid #5fb482;
+} */
+
 .message {
     resize: none;
     min-height: 96px;

@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import contact from "../styles/Contact.module.css";
+import clsx from "clsx";
 
 interface UserFormState {
     firstName: string;
@@ -10,30 +11,42 @@ interface UserFormState {
 }
 
 export default function Contact() {
-    const [user, setUser] = useState<UserFormState>({
+    const [disable, setDisable] = useState(true);
+    const [form, setForm] = useState<UserFormState>({
         firstName: "",
         email: "",
         message: "",
     });
+    const { firstName, email, message } = form;
 
     function handleChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
-        setUser({
-            ...user,
+        const newForm = {
+            ...form,
             [event.target.name]: event.target.value,
-        });
+        };
+
+        setForm(newForm);
     }
 
     function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
         event.preventDefault();
-        console.log(user);
 
-        alert("Message has been sent! Thank You!");
-        setUser({
+        setForm({
             firstName: "",
             email: "",
             message: "",
         });
+        alert(JSON.stringify(form, null, 2));
     }
+
+    useEffect(() => {
+        if (firstName && email && message) {
+            setDisable(false);
+            console.log(disable, "You can now send a message");
+        } else {
+            console.log(disable, "please fill out fields");
+        }
+    }, [disable, form, firstName, email, message]);
 
     return (
         <div>
@@ -93,31 +106,34 @@ export default function Contact() {
                 <form className={contact.form} onSubmit={handleSubmit}>
                     <h2 className={contact.formTitle}>Contact Me</h2>
                     <div className={contact.formContainer}>
-                        <label className={contact.label} htmlFor="fname">
+                        <label className={`${contact.label}`} htmlFor="fname">
                             Name
                         </label>
                         <input
-                            className={contact.input}
+                            className={`${contact.input}`}
                             id="fname"
-                            placeholder="Jane Appleseed"
                             type="text"
+                            aria-label="Name field"
+                            placeholder="Jane Appleseed"
                             name="firstName"
                             onChange={handleChange}
-                            value={user.firstName || ""}
-                            required
+                            value={form.firstName || ""}
+                            // required
                         />
+                        {/* {formErrors["firstName"] && <span className={contact.errorMessage}>This field is required</span>} */}
                         <label className={contact.label} htmlFor="email">
                             Email Address
                         </label>
                         <input
                             className={contact.input}
                             id="email"
-                            placeholder="email@example.com"
                             type="email"
+                            aria-label="Email field"
+                            placeholder="email@example.com"
                             name="email"
                             onChange={handleChange}
-                            value={user.email || ""}
-                            required
+                            value={form.email || ""}
+                            // required
                         />
                         <label className={contact.label} htmlFor="message">
                             Message
@@ -125,11 +141,13 @@ export default function Contact() {
                         <textarea
                             className={`${contact.input} ${contact.message}`}
                             id="message"
+                            aria-label="Message field"
                             placeholder="How can I help?"
                             name="message"
                             onChange={handleChange}
-                            value={user.message || ""}
-                            required
+                            value={form.message || ""}
+                            minLength={6}
+                            // required
                         />
                         <button className={contact.btn} type="submit">
                             Send Message
