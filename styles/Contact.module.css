@@ -107,9 +107,9 @@ Form
 
 @media (medium) {
     .main {
-        /* margin-top: 94px; */
+        margin-top: 47px;
         /* margin-bottom: 96px; */
-        margin: 0;
+        /* margin: 0; */
         padding: 0;
     }
 
@@ -156,9 +156,14 @@ Form
 }
 
 @media (large) {
+    .main {
+        margin-top: 40px;
+    }
+
     .form {
         margin-bottom: 109px;
     }
+
     .introContainer {
         display: grid;
         grid-template-columns: 350px minmax(350px, 635px);

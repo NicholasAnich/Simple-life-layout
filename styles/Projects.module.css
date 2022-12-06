@@ -1,5 +1,5 @@
 .container {
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 .image {
     margin-bottom: 40px;
@@ -144,7 +144,8 @@
 
 @media (min-width: 600px) {
     .container {
-        margin-top: 94px;
+        /* margin-top: 94px; */
+        margin-top: 47px;
     }
 
     .summaryContainer {
@@ -217,6 +218,10 @@
 }
 
 @media (min-width: 1000px) {
+    .container {
+        margin-top: 40px;
+    }
+
     .projectContainer {
         display: grid;
         grid-template-columns: 1.3fr 2.5fr;
