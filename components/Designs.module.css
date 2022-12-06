@@ -13,12 +13,13 @@
 }
 
 .body::after {
-    margin-top: 25px;
+    margin-top: 24px;
     margin-bottom: 72px;
 }
 
 .title {
     margin: 0;
+    margin-bottom: 18px;
 }
 
 .summary {
@@ -82,8 +83,10 @@
     }
 
     .body::before {
-        margin-top: 0;
-        margin-bottom: 32px;
+        /* margin-top: 0; */
+        /* margin-bottom: 32px; */
+        margin-top: 28px;
+        margin-bottom: 23px;
     }
 
     .body::after {
@@ -103,6 +106,7 @@
 
     .summary {
         margin-bottom: 35px;
+        padding-right: 6px;
     }
 
     .imageContainer {
@@ -116,7 +120,7 @@
 
 @media (min-width: 1000px) {
     .container {
-        margin-top: 40px;
+        margin-top: 56px;
         display: grid;
         grid-template-columns: minmax(440px, 540px) minmax(250px, 350px);
         gap: 125px;
@@ -146,6 +150,7 @@
     .summary {
         font-size: 16px;
         margin-top: 0;
+        padding-right: 0;
     }
 
     .title {

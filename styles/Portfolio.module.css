@@ -2,17 +2,18 @@
     min-height: 100%;
     margin-bottom: 80px;
     /* margin-top: 40px; */
+    margin-top: 7px;
 }
 
 @media (min-width: 600px) {
     .container {
-        margin-top: 47px;
+        margin-top: 63px;
         margin-bottom: 96px;
     }
 }
 @media (min-width: 1000px) {
     .container {
-        margin-top: 40px;
+        margin-top: 56px;
         margin-bottom: 150px;
     }
 }

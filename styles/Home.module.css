@@ -4,21 +4,35 @@
 .main {
     min-height: 100%;
     /* margin-top: 40px; */
+    margin-top: 16px;
+}
+
+.heroSection {
+    margin-bottom: 87px;
 }
 
 /* IMAGES */
 .heroImage {
     display: block;
 
-    min-height: 275px;
+    margin-bottom: 24px;
 
     max-width: auto;
+    min-height: 271px;
     max-height: 100%;
 
     background-image: url("../public/images/homepage/mobile/image-homepage-hero.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+}
+
+.heroTitle {
+    line-height: 42px;
+    letter-spacing: -0.36px;
+    padding-right: 1px;
+    margin-top: 0;
+    margin-bottom: 32px;
 }
 
 /* Author */
@@ -31,7 +45,7 @@
     display: block;
     width: 100%;
     height: 1px;
-    margin: 2em 0 2em;
+    /* margin: 2em 0 2em; */
     background-color: #33323d;
     opacity: 0.15;
 }
@@ -48,7 +62,8 @@
 }
 
 .aboutBody {
-    line-height: 1.875;
+    /* line-height: 1.875; */
+    line-height: 30px;
     opacity: 0.8;
     margin-bottom: 24px;
 }
@@ -61,7 +76,7 @@
     padding: 0;
     cursor: pointer;
     /* margin-bottom: 96px; */
-    margin-bottom: 6em;
+    /* margin-bottom: 6em; */
     background-color: #203a4c;
 }
 
@@ -157,13 +172,18 @@
         background-image: url("../public/images/homepage/mobile/image-homepage-hero@2x.jpg");
     }
     .author {
+        margin-bottom: 28px;
         text-align: center;
+    }
+    .aboutTitle {
+        margin-top: 29px;
+        margin-bottom: 28px;
     }
 }
 /* Tabelet */
 @media (medium) {
     .main {
-        margin-top: 47px;
+        /* margin-top: 47px; */
     }
     .heroSection {
         position: relative;
@@ -224,7 +244,7 @@
 /* Desktop */
 @media (large) {
     .main {
-        margin-top: 54px;
+        /* margin-top: 54px; */
     }
     .heroImage {
         min-height: 600px;
@@ -257,7 +277,7 @@
     }
 
     .aboutMe::after {
-        margin-top: 50px;
+        margin-top: 47px;
     }
 
     .author {

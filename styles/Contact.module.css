@@ -4,6 +4,7 @@
 .main {
     min-height: 100%;
     /* margin-top: 40px; */
+    margin-top: 16px;
 }
 
 .title {
@@ -107,7 +108,7 @@ Form
 
 @media (medium) {
     .main {
-        margin-top: 47px;
+        margin-top: 63px;
         /* margin-bottom: 96px; */
         /* margin: 0; */
         padding: 0;
@@ -157,7 +158,7 @@ Form
 
 @media (large) {
     .main {
-        margin-top: 40px;
+        margin-top: 56px;
     }
 
     .form {
