@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import Layout from "../components/layout";
+import styles from "../styles/App.module.css";
 import { Public_Sans } from "@next/font/google";
 import type { AppProps } from "next/app";
 
@@ -12,7 +13,7 @@ const publicSans = Public_Sans({
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <Layout>
-            <div className={publicSans.className}>
+            <div className={`${publicSans.className} ${styles.container}`}>
                 <Component {...pageProps} />
             </div>
         </Layout>
