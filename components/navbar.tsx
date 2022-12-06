@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Public_Sans } from "@next/font/google";
+
 import Link from "next/link";
 import Image from "next/image";
+
 import styles from "./NavBar.module.css";
 import { useRouter } from "next/router";
 
@@ -30,7 +32,10 @@ export default function Navbar() {
                             </Link>
                         </li>
                         <li className={styles.item}>
-                            <Link href="/portfolio" className={`${styles.link} ${currentRoute === "/portfolio" ? styles.active : styles.nonActive}`}>
+                            <Link
+                                href="/portfolio"
+                                className={`${styles.link} ${currentRoute !== "/" && currentRoute !== "/contact" ? styles.active : styles.nonActive}`}
+                            >
                                 Portfolio
                             </Link>
                         </li>

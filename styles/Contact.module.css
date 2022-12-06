@@ -22,9 +22,10 @@
 .intro::after {
     content: "";
     display: block;
+
     height: 1px;
     width: 100%;
-    /* margin-top: 50px; */
+
     background-color: #33323d;
     opacity: 0.15;
 }
@@ -33,10 +34,11 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    list-style: none;
+
     padding: 0;
     margin-top: 24px;
-    /* margin-bottom: 32px; */
+
+    list-style: none;
 }
 
 .social:hover {
@@ -109,8 +111,6 @@ Form
 @media (medium) {
     .main {
         margin-top: 63px;
-        /* margin-bottom: 96px; */
-        /* margin: 0; */
         padding: 0;
     }
 
@@ -169,7 +169,6 @@ Form
         display: grid;
         grid-template-columns: 350px minmax(350px, 635px);
         column-gap: 125px;
-        /* grid-template-rows: 1fr 48px; */
     }
     .intro::before {
         margin-bottom: 0;
