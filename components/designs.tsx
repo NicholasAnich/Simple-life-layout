@@ -1,16 +1,12 @@
 import Link from "next/link";
-import { useState } from "react";
-import portfolio from "../styles/Portfolio.module.css";
 import designs from "./Designs.module.css";
 
 export default function Designs({ id, ...project }) {
-    // const [isReversed, setIsReversed] = useState(false);
     const {
         projectName,
         summary,
         images: { mobile, tablet, desktop },
     } = project;
-    // console.log({ mobile, tablet, desktop });
     let isReversed = false;
 
     if (id % 2 !== 0) {

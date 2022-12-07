@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
-import React, { useState } from "react";
+import clsx from "clsx";
+import React, { useEffect, useState } from "react";
 import contact from "../styles/Contact.module.css";
+import { useFormValidator } from "../hooks/useFormValidator";
 
 interface UserFormState {
     firstName: string;
@@ -10,29 +12,43 @@ interface UserFormState {
 }
 
 export default function Contact() {
-    const [user, setUser] = useState<UserFormState>({
+    const [form, setForm] = useState<UserFormState>({
         firstName: "",
         email: "",
         message: "",
     });
 
+    const { firstName, email, message } = form;
+    const { errors, validateForm, onBlurField } = useFormValidator(form);
+
     function handleChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
-        setUser({
-            ...user,
-            [event.target.name]: event.target.value,
-        });
+        const field: string = event.target.name;
+        const newForm = {
+            ...form,
+            [field]: event.target.value,
+        };
+        setForm(newForm);
+        if (errors[field].dirty) {
+            validateForm({
+                form: newForm,
+                errors,
+                field,
+            });
+        }
     }
 
     function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
         event.preventDefault();
-        console.log(user);
-
-        alert("Message has been sent! Thank You!");
-        setUser({
+        const { isValid } = validateForm({ form, errors, forceTouchErrors: true });
+        if (!isValid) {
+            return;
+        }
+        setForm({
             firstName: "",
             email: "",
             message: "",
         });
+        alert(JSON.stringify(form, null, 2));
     }
 
     return (
@@ -93,44 +109,50 @@ export default function Contact() {
                 <form className={contact.form} onSubmit={handleSubmit}>
                     <h2 className={contact.formTitle}>Contact Me</h2>
                     <div className={contact.formContainer}>
-                        <label className={contact.label} htmlFor="fname">
+                        <label className={`${contact.label}`} htmlFor="firstName">
                             Name
                         </label>
                         <input
-                            className={contact.input}
-                            id="fname"
-                            placeholder="Jane Appleseed"
+                            className={clsx(contact.input, errors.firstName.dirty && errors.firstName.error && contact.formFieldError)}
+                            id="firstName"
                             type="text"
+                            aria-label="Name field"
+                            placeholder="Jane Appleseed"
                             name="firstName"
                             onChange={handleChange}
-                            value={user.firstName || ""}
-                            required
+                            onBlur={onBlurField}
+                            value={form.firstName || ""}
                         />
+                        {errors.firstName.dirty ? <p className={contact.formFieldErrorMessage}>{errors.firstName.message}</p> : null}
                         <label className={contact.label} htmlFor="email">
                             Email Address
                         </label>
                         <input
-                            className={contact.input}
+                            className={clsx(contact.input, errors.email.dirty && errors.email.error && contact.formFieldError)}
                             id="email"
-                            placeholder="email@example.com"
                             type="email"
+                            aria-label="Email field"
+                            placeholder="email@example.com"
                             name="email"
                             onChange={handleChange}
-                            value={user.email || ""}
-                            required
+                            onBlur={onBlurField}
+                            value={form.email || ""}
                         />
+                        {errors.email.dirty ? <p className={contact.formFieldErrorMessage}>{errors.email.message}</p> : null}
                         <label className={contact.label} htmlFor="message">
                             Message
                         </label>
                         <textarea
-                            className={`${contact.input} ${contact.message}`}
+                            className={clsx(contact.input, contact.message, errors.message.dirty && errors.message.error && contact.formFieldError)}
                             id="message"
+                            aria-label="Message field"
                             placeholder="How can I help?"
                             name="message"
                             onChange={handleChange}
-                            value={user.message || ""}
-                            required
+                            onBlur={onBlurField}
+                            value={form.message || ""}
                         />
+                        {errors.message.dirty ? <p className={contact.formFieldErrorMessage}>{errors.message.message}</p> : null}
                         <button className={contact.btn} type="submit">
                             Send Message
                         </button>

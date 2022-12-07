@@ -43,10 +43,12 @@ const Project = ({ projectList }: { projectList: Project }) => {
             {language}{" "}
         </span>
     ));
+
     const mobilePreview = details.preview.mobile;
     const tabletPreview = details.preview.tablet;
     const desktopPreview = details.preview.desktop;
     const hero = details.hero;
+
     return (
         <div className={styles.container}>
             <picture>

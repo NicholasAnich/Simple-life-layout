@@ -106,6 +106,7 @@
 
 .active {
     color: #5fb4a2;
+    pointer-events: none;
 }
 
 .nonActive {

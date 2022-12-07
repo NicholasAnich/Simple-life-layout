@@ -2,29 +2,41 @@ import { Public_Sans } from "@next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 import footer from "./Footer.module.css";
+import { useRouter } from "next/router";
 
 const publicSans = Public_Sans({ subsets: ["latin"] });
 
 export default function Footer() {
+    const router = useRouter();
+    const currentRoute = router.pathname;
+
     return (
         <footer className={`${footer.container} ${publicSans.className}`}>
             <div className={footer.body}>
-                <Link href={"/"}>
+                <Link href="/">
                     <Image className={footer.logo} src="/images/logo-light.svg" alt="Light Logo" width={60} height={32}></Image>
                 </Link>
                 <ul className={footer.list}>
                     <li>
-                        <Link href="/" className={`${footer.link} ${footer.listItem}`}>
+                        <Link href="/" className={`${footer.link} ${footer.listItem} ${currentRoute === "/" ? footer.active : footer.nonActive}`}>
                             Home
                         </Link>
                     </li>
                     <li>
-                        <Link href="/portfolio" className={`${footer.link} ${footer.listItem}`}>
+                        <Link
+                            href="/portfolio"
+                            className={`${footer.link} ${footer.listItem} ${
+                                currentRoute !== "/" && currentRoute !== "/contact" ? footer.active : footer.nonActive
+                            }`}
+                        >
                             Portfolio
                         </Link>
                     </li>
                     <li>
-                        <Link href="/contact" className={`${footer.link} ${footer.listItem}`}>
+                        <Link
+                            href="/contact"
+                            className={`${footer.link} ${footer.listItem} ${currentRoute === "/contact" ? footer.active : footer.nonActive}`}
+                        >
                             Contact Me
                         </Link>
                     </li>

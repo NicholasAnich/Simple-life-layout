@@ -22,9 +22,10 @@
 .intro::after {
     content: "";
     display: block;
+
     height: 1px;
     width: 100%;
-    /* margin-top: 50px; */
+
     background-color: #33323d;
     opacity: 0.15;
 }
@@ -33,10 +34,11 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    list-style: none;
+
     padding: 0;
     margin-top: 24px;
-    /* margin-bottom: 32px; */
+
+    list-style: none;
 }
 
 .social:hover {
@@ -80,9 +82,31 @@ Form
     margin-bottom: 24px;
     background-color: rgba(51, 50, 61, 0.1);
     color: rgba(51, 50, 61, 0.4);
-    /* opacity: 0.4; */
     padding: 0.6923em 1.2307em;
     border: none;
+}
+
+.input:focus {
+    outline: none;
+    border: 1px solid #5fb482;
+    color: #33323d;
+}
+.input:focus::placeholder {
+    content: "";
+    color: transparent;
+}
+
+.formFieldError {
+    border: 1px solid #f43030;
+}
+
+.formFieldErrorMessage {
+    color: #f43030;
+    font-size: 10px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 11.75px;
+    margin-top: -20px;
 }
 
 .message {
@@ -109,8 +133,6 @@ Form
 @media (medium) {
     .main {
         margin-top: 63px;
-        /* margin-bottom: 96px; */
-        /* margin: 0; */
         padding: 0;
     }
 
@@ -169,7 +191,6 @@ Form
         display: grid;
         grid-template-columns: 350px minmax(350px, 635px);
         column-gap: 125px;
-        /* grid-template-rows: 1fr 48px; */
     }
     .intro::before {
         margin-bottom: 0;

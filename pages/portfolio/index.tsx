@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 
 import Reachout from "../../components/reachout";
 import Designs from "../../components/designs";
@@ -19,12 +18,7 @@ export const getStaticProps = async () => {
 
 export default function Portfolio({ projectList }: { projectList: Project }) {
     const projects = projectList.map((project, i) => {
-        const {
-            id,
-            projectName,
-            // summary,
-            // images: { mobile, tablet, desktop },
-        } = project;
+        const { id, projectName } = project;
 
         return (
             <div className={portfolio.project} key={`${projectName}${i}`}>
