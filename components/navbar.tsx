@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Public_Sans } from "@next/font/google";
+import { clsx } from "clsx";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -17,6 +18,10 @@ export default function Navbar() {
     const handleToggle = () => {
         setNavbarOpen((prev) => !prev);
     };
+    const state = clsx({
+        active: true,
+        nonActive: false,
+    });
 
     return (
         <header className={`${styles.container} ${publicSans.className}`}>
@@ -27,20 +32,20 @@ export default function Navbar() {
                 <nav className={styles.nav}>
                     <ul className={styles.list}>
                         <li className={styles.item}>
-                            <Link href="/" className={`${styles.link} ${currentRoute === "/" ? styles.active : styles.nonActive}`}>
+                            <Link href="/" className={clsx(styles.link, currentRoute === "/" && styles[state])}>
                                 Home
                             </Link>
                         </li>
                         <li className={styles.item}>
                             <Link
                                 href="/portfolio"
-                                className={`${styles.link} ${currentRoute !== "/" && currentRoute !== "/contact" ? styles.active : styles.nonActive}`}
+                                className={clsx(styles.link, currentRoute !== "/" && currentRoute !== "/contact" && styles[state])}
                             >
                                 Portfolio
                             </Link>
                         </li>
                         <li className={styles.item}>
-                            <Link href="/contact" className={`${styles.link} ${currentRoute === "/contact" ? styles.active : styles.nonActive}`}>
+                            <Link href="/contact" className={clsx(styles.link, currentRoute === "/contact" && styles[state])}>
                                 Contact Me
                             </Link>
                         </li>
@@ -55,17 +60,20 @@ export default function Navbar() {
                 </button>
                 <ul className={`menuNav ${navbarOpen ? styles.showMenu : styles.hideMenu}`}>
                     <li className={styles.item}>
-                        <Link href="/" className={styles.burgerItem}>
+                        <Link href="/" className={clsx(styles.burgerItem, currentRoute === "/" && styles[state])}>
                             Home
                         </Link>
                     </li>
                     <li className={styles.item}>
-                        <Link href="/portfolio" className={styles.burgerItem}>
+                        <Link
+                            href="/portfolio"
+                            className={clsx(styles.burgerItem, currentRoute !== "/" && currentRoute !== "/contact" && styles[state])}
+                        >
                             Portfolio
                         </Link>
                     </li>
                     <li className={styles.item}>
-                        <Link href="/contact" className={styles.burgerItem}>
+                        <Link href="/contact" className={clsx(styles.burgerItem, currentRoute === "/contact" && styles[state])}>
                             Contact Me
                         </Link>
                     </li>
