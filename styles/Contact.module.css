@@ -82,7 +82,6 @@ Form
     margin-bottom: 24px;
     background-color: rgba(51, 50, 61, 0.1);
     color: rgba(51, 50, 61, 0.4);
-    /* opacity: 0.4; */
     padding: 0.6923em 1.2307em;
     border: none;
 }
@@ -90,6 +89,7 @@ Form
 .input:focus {
     outline: none;
     border: 1px solid #5fb482;
+    color: #33323d;
 }
 .input:focus::placeholder {
     content: "";

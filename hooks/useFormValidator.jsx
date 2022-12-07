@@ -52,12 +52,14 @@ export const useFormValidator = (form) => {
             const firstNameMessage = nameValidator(firstName);
             nextErrors.firstName.error = !!firstNameMessage;
             nextErrors.firstName.message = firstNameMessage;
+            if (!!firstNameMessage) isValid = false;
         }
 
         if (nextErrors.message.dirty && (field ? field === "message" : true)) {
             const messageMessage = messageValidator(message);
             nextErrors.message.error = !!messageMessage;
             nextErrors.message.message = messageMessage;
+            if (!!messageMessage) isValid = false;
         }
 
         setErrors(nextErrors);

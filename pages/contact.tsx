@@ -12,12 +12,12 @@ interface UserFormState {
 }
 
 export default function Contact() {
-    const [disable, setDisable] = useState(true);
     const [form, setForm] = useState<UserFormState>({
         firstName: "",
         email: "",
         message: "",
     });
+
     const { firstName, email, message } = form;
     const { errors, validateForm, onBlurField } = useFormValidator(form);
 
@@ -39,7 +39,10 @@ export default function Contact() {
 
     function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
         event.preventDefault();
-
+        const { isValid } = validateForm({ form, errors, forceTouchErrors: true });
+        if (!isValid) {
+            return;
+        }
         setForm({
             firstName: "",
             email: "",
@@ -47,15 +50,6 @@ export default function Contact() {
         });
         alert(JSON.stringify(form, null, 2));
     }
-
-    useEffect(() => {
-        if (firstName && email && message) {
-            setDisable(false);
-            console.log(disable, "You can now send a message");
-        } else {
-            console.log(disable, "please fill out fields");
-        }
-    }, [disable, form, firstName, email, message]);
 
     return (
         <div>
@@ -128,7 +122,6 @@ export default function Contact() {
                             onChange={handleChange}
                             onBlur={onBlurField}
                             value={form.firstName || ""}
-                            // required
                         />
                         {errors.firstName.dirty ? <p className={contact.formFieldErrorMessage}>{errors.firstName.message}</p> : null}
                         <label className={contact.label} htmlFor="email">
@@ -144,7 +137,6 @@ export default function Contact() {
                             onChange={handleChange}
                             onBlur={onBlurField}
                             value={form.email || ""}
-                            // required
                         />
                         {errors.email.dirty ? <p className={contact.formFieldErrorMessage}>{errors.email.message}</p> : null}
                         <label className={contact.label} htmlFor="message">
@@ -159,8 +151,6 @@ export default function Contact() {
                             onChange={handleChange}
                             onBlur={onBlurField}
                             value={form.message || ""}
-                            // minLength={6}
-                            // required
                         />
                         {errors.message.dirty ? <p className={contact.formFieldErrorMessage}>{errors.message.message}</p> : null}
                         <button className={contact.btn} type="submit">
