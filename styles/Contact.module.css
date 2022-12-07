@@ -96,16 +96,18 @@ Form
     color: transparent;
 }
 
-.hasError {
-    border: 1px solid red;
+.formFieldError {
+    border: 1px solid #f43030;
 }
 
-/* .input:required:invalid {
-    border: 1px solid red;
+.formFieldErrorMessage {
+    color: #f43030;
+    font-size: 10px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 11.75px;
+    margin-top: -20px;
 }
-.input:required:focus {
-    border: 1px solid #5fb482;
-} */
 
 .message {
     resize: none;

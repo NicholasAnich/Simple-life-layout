@@ -81,6 +81,7 @@
 .nonActive {
     color: #fff;
 }
+
 @media (min-width: 37.5em) {
     .container {
         grid-template-columns: 32px minmax(250px, 1111px) 32px;
