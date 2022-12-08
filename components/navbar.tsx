@@ -12,12 +12,26 @@ const publicSans = Public_Sans({ subsets: ["latin"] });
 
 export default function Navbar() {
     const [navbarOpen, setNavbarOpen] = useState(false);
+    const [timeOutId, setTimeoutId] = useState(null);
     const router = useRouter();
     const currentRoute = router.pathname;
 
-    const handleToggle = () => {
+    function handleToggle() {
         setNavbarOpen((prev) => !prev);
-    };
+    }
+
+    function hide() {
+        setTimeout(() => {
+            setNavbarOpen(false);
+        });
+    }
+
+    function show() {
+        setTimeout(() => {
+            clearTimeout(timeOutId);
+        });
+    }
+
     const state = clsx({
         active: true,
         nonActive: false,
@@ -51,14 +65,20 @@ export default function Navbar() {
                         </li>
                     </ul>
                 </nav>
-                <button className={`${styles.menu} ${navbarOpen ? "close" : "open"}`} aria-controls="menu" onClick={handleToggle}>
+                <button
+                    className={`${styles.menu} ${navbarOpen ? "close" : "open"}`}
+                    onClick={handleToggle}
+                    aria-controls="menu"
+                    aria-haspopup="true"
+                    aria-expanded={navbarOpen}
+                >
                     {navbarOpen ? (
                         <Image src="/images/icons/close.svg" alt="close nav menu" width={18} height={19}></Image>
                     ) : (
                         <Image src="/images/icons/hamburger.svg" alt="open nav menu" width={24} height={13}></Image>
                     )}
                 </button>
-                <ul className={`menuNav ${navbarOpen ? styles.showMenu : styles.hideMenu}`}>
+                <ul className={`menuNav ${navbarOpen ? styles.showMenu : styles.hideMenu}`} onMouseLeave={hide}>
                     <li className={styles.item}>
                         <Link href="/" className={clsx(styles.burgerItem, currentRoute === "/" && styles[state])}>
                             Home
@@ -68,12 +88,17 @@ export default function Navbar() {
                         <Link
                             href="/portfolio"
                             className={clsx(styles.burgerItem, currentRoute !== "/" && currentRoute !== "/contact" && styles[state])}
+                            onClick={handleToggle}
                         >
                             Portfolio
                         </Link>
                     </li>
                     <li className={styles.item}>
-                        <Link href="/contact" className={clsx(styles.burgerItem, currentRoute === "/contact" && styles[state])}>
+                        <Link
+                            href="/contact"
+                            className={clsx(styles.burgerItem, currentRoute === "/contact" && styles[state])}
+                            onClick={handleToggle}
+                        >
                             Contact Me
                         </Link>
                     </li>
