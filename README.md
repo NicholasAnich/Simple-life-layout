@@ -29,10 +29,11 @@ Users should be able to:
 
 ### Screenshots
 
-![Home Screen Mobile View](./public/images/screenshots/homeMobile.png)
-![](./public/images/screenshots/portfolioMobile.png)
-![](./public/images/screenshots/projectMobile.png)
-![](./public/images/screenshots/contactMobile.png)
+![](./public/images/screenshots/home.png)
+![](./public/images/screenshots/portfolio.png)
+![](./public/images/screenshots/contactMeActive.png)
+![](./public/images/screenshots/project.png)
+![](./public/images/screenshots/projectTablet.png)
 
 ### Links
 
