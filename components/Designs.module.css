@@ -51,7 +51,7 @@
     opacity: 1;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
     .container {
         display: grid;
         grid-template-columns: minmax(239px, 440px) minmax(181px, 415px);
@@ -110,7 +110,7 @@
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 62.5em) {
     .container {
         margin-top: 56px;
         display: grid;

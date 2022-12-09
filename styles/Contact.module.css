@@ -1,6 +1,5 @@
 .main {
     min-height: 100%;
-    /* margin-top: 40px; */
     margin-top: 16px;
 }
 
@@ -10,7 +9,6 @@
 }
 
 .body {
-    /* line-height: 30px */
     font-size: 15px;
     line-height: 1.875;
 }

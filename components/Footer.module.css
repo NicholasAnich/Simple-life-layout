@@ -119,10 +119,7 @@
     }
 }
 
-@media (min-width: 1000px) {
-}
-
-@media (min-width: 1180px) {
+@media (min-width: 73.75em) {
     .body {
         padding: 0;
     }

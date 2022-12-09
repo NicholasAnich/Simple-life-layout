@@ -63,7 +63,8 @@ export default function Contact() {
             email: "",
             message: "",
         });
-        alert(JSON.stringify(form, null, 2));
+
+        alert("Thank you! Message has been sent!");
     }
 
     return (

@@ -46,11 +46,11 @@ export default function Home() {
                 <div className={styles.author}>
                     <picture>
                         <source
-                            media="(min-width: 62.5em)"
+                            media="(min-width: 66.6em)"
                             srcSet="/images/homepage/desktop/image-homepage-profile.jpg, /images/homepage/desktop/image-homepage-profile@2x.jpg"
                         />
                         <source
-                            media="(min-width: 37.5em)"
+                            media="(min-width: 40em)"
                             srcSet="/images/homepage/tablet/image-homepage-profile.jpg, /images/homepage/tablet/image-homepage-profile@2x.jpg"
                         />
                         <source srcSet="/images/homepage/mobile/image-homepage-profile.jpg 311w, /images/homepage/mobile/image-homepage-profile@2x.jpg 622w" />

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { projects } from "../../data";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { Item } from "../../lib/types";
@@ -26,7 +25,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 const Project = ({ projectList }: { projectList: Item }) => {
-    const [click, setClick] = useState(false);
     const { id, projectName, type, engineer, languages, background, summary, details } = projectList;
     let next = id + 1;
     let prev = id - 1;
@@ -51,12 +49,6 @@ const Project = ({ projectList }: { projectList: Item }) => {
     const desktopPreview = details.preview.desktop;
     const hero = details.hero;
 
-    function handleClick() {
-        console.log("clicked");
-        alert("Website coming soon");
-        setClick(true);
-    }
-
     return (
         <div className={styles.container}>
             <picture>
@@ -77,9 +69,7 @@ const Project = ({ projectList }: { projectList: Item }) => {
                         <span className={styles.languages}>{languageMeta}</span>
                     </div>
                     <Link className={styles.link} href="#">
-                        <button onClick={handleClick} className={`${home.linkBtn} ${styles.btn}`}>
-                            Visit Website
-                        </button>
+                        <button className={`${home.linkBtn} ${styles.btn}`}>Visit Website</button>
                     </Link>
                 </div>
                 <div className={styles.backgroundPreviewContainer}>

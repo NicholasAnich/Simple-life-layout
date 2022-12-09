@@ -18,19 +18,16 @@
 }
 
 .contactMe {
-    /* margin: 7.1875em 0 5em; */
     margin-bottom: 80px;
     text-align: center;
 }
 
 .contactTitle {
-    /* margin-bottom: 1em; */
     margin-bottom: 40px;
     line-height: 42px;
-    /* margin: 0; */
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40em) {
     .contactMe {
         display: flex;
         align-items: center;
@@ -50,7 +47,7 @@
     }
 }
 
-@media (min-width: 766px) {
+@media (min-width: 47.9em) {
     .divider {
         content: "";
         display: inline-block;
@@ -63,7 +60,7 @@
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 62.5em) {
     .contactMe {
         margin-bottom: 150px;
     }
