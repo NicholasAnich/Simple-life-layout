@@ -41,6 +41,7 @@ export default function Contact() {
         event.preventDefault();
         const { isValid } = validateForm({ form, errors, forceTouchErrors: true });
         if (!isValid) {
+            alert("Please fill out the required fields");
             return;
         }
         setForm({
@@ -153,7 +154,7 @@ export default function Contact() {
                             value={form.message || ""}
                         />
                         {errors.message.dirty ? <p className={contact.formFieldErrorMessage}>{errors.message.message}</p> : null}
-                        <button className={contact.btn} type="submit" disabled>
+                        <button className={contact.btn} type="submit">
                             Send Message
                         </button>
                     </div>
