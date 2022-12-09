@@ -153,7 +153,7 @@ export default function Contact() {
                             value={form.message || ""}
                         />
                         {errors.message.dirty ? <p className={contact.formFieldErrorMessage}>{errors.message.message}</p> : null}
-                        <button className={contact.btn} type="submit">
+                        <button className={contact.btn} type="submit" disabled>
                             Send Message
                         </button>
                     </div>

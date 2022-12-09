@@ -122,12 +122,22 @@ Form
     letter-spacing: 2px;
     max-width: 200px;
     min-height: 48px;
+}
+
+.btn:not(:disabled) {
     cursor: pointer;
 }
 
 .btn:hover,
 .btn:focus {
     background-color: #5fb482;
+}
+
+.btn:disabled {
+    background-color: #fff;
+    border: 1px solid #eaeaeb;
+    color: #eaeaeb;
+    pointer-events: disabled;
 }
 
 @media (medium) {
