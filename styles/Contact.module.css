@@ -129,6 +129,10 @@ Form
 .btn:focus {
     background-color: #5fb482;
 }
+.formContainer > .btn:not(:hover) {
+    background-color: #203a4c;
+    color: white;
+}
 
 .btn:disabled {
     background-color: #fff;

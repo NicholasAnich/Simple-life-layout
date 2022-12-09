@@ -101,6 +101,7 @@
     padding: 1.125em 1em;
     grid-area: arrow;
 }
+
 .btnImageDark:not(:disabled) {
     padding: 0;
     margin: 0;

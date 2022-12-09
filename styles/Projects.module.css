@@ -60,6 +60,10 @@
     display: inline-block;
     margin-bottom: 24px;
 }
+.link > .btn:not(:hover) {
+    background-color: white;
+    color: #33323d;
+}
 
 .btn {
     cursor: pointer;
