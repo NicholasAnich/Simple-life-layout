@@ -6,10 +6,10 @@
 
 -   [Overview](#overview)
     -   [The challenge](#the-challenge)
-    -   [Screenshots](#screenshots)
-    -   [Links](#links)
--   [My process](#my-process)
     -   [Built with](#built-with)
+    -   [Links](#links)
+    -   [Screenshots](#screenshots)
+-   [My process](#my-process)
     -   [What I learned](#what-i-learned)
     -   [Continued development](#continued-development)
     -   [Useful resources](#useful-resources)
@@ -27,21 +27,6 @@ Users should be able to:
 -   View the optimal layout depending on their device's screen size
 -   See hover and focus states for interactive elements
 
-### Screenshots
-
-![](./public/images/screenshots/home.png)
-![](./public/images/screenshots/portfolio.png)
-![](./public/images/screenshots/contactMeActive.png)
-![](./public/images/screenshots/project.png)
-![](./public/images/screenshots/projectTablet.png)
-
-### Links
-
--   Solution URL: [Github]()
--   Live Site URL: [Netlify Page]()
-
-## My process
-
 ### Built with
 
 -   Semantic HTML5 markup
@@ -51,6 +36,21 @@ Users should be able to:
 -   Flexbox
 -   Grid
 -   Mobile-first workflow
+
+### Screenshots
+
+![home page mobile preview](./public/images/screenshots/home.png)
+![portfolio mobile preview](./public/images/screenshots/portfolio.png)
+![contact mobile preview](./public/images/screenshots/contactMeActive.png)
+![project mobile preview](./public/images/screenshots/project.png)
+![project tablet preview](./public/images/screenshots/projectTablet.png)
+
+### Links
+
+-   Solution URL: [Github](https://github.com/NicholasAnich/next-minimalist-porfolio)
+-   Live Site URL: [Website](https://next-minimalist-porfolio-git-gridlayout-nicholasanich.vercel.app/)
+
+## My process
 
 ### What I learned
 
