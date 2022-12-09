@@ -1,9 +1,5 @@
-@value breakpoints: "../components/Bpoints.module.css";
-@value small, medium, large from breakpoints;
-
 .main {
     min-height: 100%;
-    /* margin-top: 40px; */
     margin-top: 16px;
 }
 
@@ -13,7 +9,6 @@
 }
 
 .body {
-    /* line-height: 30px */
     font-size: 15px;
     line-height: 1.875;
 }
@@ -132,6 +127,10 @@ Form
 .btn:focus {
     background-color: #5fb482;
 }
+.formContainer > .btn:not(:hover) {
+    background-color: #203a4c;
+    color: white;
+}
 
 .btn:disabled {
     background-color: #fff;
@@ -140,7 +139,7 @@ Form
     pointer-events: disabled;
 }
 
-@media (medium) {
+@media (min-width: 37.5em) {
     .main {
         margin-top: 63px;
         padding: 0;
@@ -188,7 +187,7 @@ Form
     }
 }
 
-@media (large) {
+@media (min-width: 62.5em) {
     .main {
         margin-top: 56px;
     }

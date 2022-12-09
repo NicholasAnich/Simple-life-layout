@@ -4,13 +4,13 @@
     margin-top: 7px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
     .container {
         margin-top: 63px;
         margin-bottom: 96px;
     }
 }
-@media (min-width: 1000px) {
+@media (min-width: 62.5em) {
     .container {
         margin-top: 56px;
         margin-bottom: 150px;

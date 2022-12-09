@@ -2,7 +2,6 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Reachout from "../components/reachout";
-import { useState } from "react";
 
 interface User {
     firstName: string;
@@ -10,21 +9,7 @@ interface User {
     message: string;
 }
 
-interface AddMessage {
-    handleMessages: (user: User) => void;
-}
-
 export default function Home() {
-    const [userList, setUserList] = useState<User[]>([]);
-
-    const handleMessages = (user: User) => {
-        setUserList([user, ...userList]);
-    };
-
-    const functionProps = {
-        addMessage: handleMessages,
-    };
-
     return (
         <div className={styles.main}>
             <Head>
@@ -61,11 +46,11 @@ export default function Home() {
                 <div className={styles.author}>
                     <picture>
                         <source
-                            media="(min-width: 62.5em)"
+                            media="(min-width: 66.6em)"
                             srcSet="/images/homepage/desktop/image-homepage-profile.jpg, /images/homepage/desktop/image-homepage-profile@2x.jpg"
                         />
                         <source
-                            media="(min-width: 37.5em)"
+                            media="(min-width: 40em)"
                             srcSet="/images/homepage/tablet/image-homepage-profile.jpg, /images/homepage/tablet/image-homepage-profile@2x.jpg"
                         />
                         <source srcSet="/images/homepage/mobile/image-homepage-profile.jpg 311w, /images/homepage/mobile/image-homepage-profile@2x.jpg 622w" />

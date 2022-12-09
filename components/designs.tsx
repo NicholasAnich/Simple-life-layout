@@ -1,12 +1,19 @@
 import Link from "next/link";
 import designs from "./Designs.module.css";
+import { Project, Item } from "../lib/types";
 
-export default function Designs({ id, ...project }) {
+type DesignsProps = {
+    id: number;
+    project: Item;
+};
+
+export default function Designs({ id, project }: DesignsProps) {
     const {
         projectName,
         summary,
         images: { mobile, tablet, desktop },
-    } = project;
+    }: any = project;
+
     let isReversed = false;
 
     if (id % 2 !== 0) {

@@ -1,6 +1,7 @@
 .container {
     margin-top: 16px;
 }
+
 .image {
     margin-bottom: 40px;
 }
@@ -59,6 +60,10 @@
 .link {
     display: inline-block;
     margin-bottom: 24px;
+}
+.link > .btn:not(:hover) {
+    background-color: white;
+    color: #33323d;
 }
 
 .btn {
@@ -144,7 +149,7 @@
     opacity: 0.5;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
     .container {
         margin-top: 63px;
     }
@@ -204,10 +209,6 @@
     }
 
     /* Nav Buttons */
-
-    .projectNav {
-    }
-
     .navPrev {
         flex-direction: row;
         align-items: center;
@@ -236,7 +237,7 @@
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 62.5em) {
     /************** 
         CONTAINERS 
     **************/

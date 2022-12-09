@@ -1,6 +1,3 @@
-@value breakpoints: "../components/Bpoints.module.css";
-@value small, medium, large from breakpoints;
-
 :root {
     --primary-font-color: #33323d;
     --primary-bg-color: #fafafa;
@@ -62,13 +59,10 @@ h3 {
 
 img {
     max-width: 100%;
-    /* width: 100%; */
-    /* width: 100%; */
     display: block;
-    /* height: auto; */
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 62.5em) {
     h1 {
         font-size: 50px;
     }
@@ -82,8 +76,6 @@ img {
     }
 
     img {
-        /* width: 100%; */
         height: 100%;
-        /* object-fit: cover; */
     }
 }
