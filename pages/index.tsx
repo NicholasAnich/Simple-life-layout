@@ -19,8 +19,6 @@ export default function Home() {
 
     const handleMessages = (user: User) => {
         setUserList([user, ...userList]);
-        console.log("Successfully Added...");
-        console.log({ userList });
     };
 
     const functionProps = {
@@ -36,7 +34,12 @@ export default function Home() {
                 <span className={styles.heroImage}></span>
                 <div className={styles.heroIntro}>
                     <h1 className={styles.heroTitle}>Hey, I&apos;m Alex Spencer and I love building beautiful websites</h1>
-                    <a href="#about" className={styles.btnContainer}>
+                    <button
+                        className={styles.btnContainer}
+                        onClick={() => {
+                            window.location.href = "#about";
+                        }}
+                    >
                         <div className={styles.grid_container}>
                             <span className={styles.btnImage}></span>
                             <span className={styles.btnImageDark}></span>
@@ -47,12 +50,11 @@ export default function Home() {
                                     <path opacity=".25" d="M0 1l8 4 8-4" />
                                 </g>
                             </svg>
-
                             <span className={styles.btn}>
                                 <p className={styles.btnText}>ABOUT ME</p>
                             </span>
                         </div>
-                    </a>
+                    </button>
                 </div>
             </div>
             <div className={styles.aboutMeSection}>
@@ -84,7 +86,7 @@ export default function Home() {
                     </Link>
                 </div>
             </div>
-            <Reachout handleMessages={handleMessages} />
+            <Reachout />
         </div>
     );
 }

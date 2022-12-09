@@ -3,7 +3,6 @@
 
 .main {
     min-height: 100%;
-    /* margin-top: 40px; */
     margin-top: 16px;
 }
 
@@ -45,7 +44,6 @@
     display: block;
     width: 100%;
     height: 1px;
-    /* margin: 2em 0 2em; */
     background-color: #33323d;
     opacity: 0.15;
 }
@@ -55,7 +53,6 @@
     display: block;
     width: 100%;
     height: 1px;
-    /* margin: 51px 0 0; */
     margin: 3.1875rem 0 0;
     background-color: #33323d;
     opacity: 0.15;
@@ -75,8 +72,6 @@
     margin: 0;
     padding: 0;
     cursor: pointer;
-    /* margin-bottom: 96px; */
-    /* margin-bottom: 6em; */
     background-color: #203a4c;
 }
 
@@ -109,7 +104,7 @@
     padding: 1.125em 1em;
     grid-area: arrow;
 }
-.btnImageDark {
+.btnImageDark:not(:disabled) {
     padding: 0;
     margin: 0;
     padding: 1.125em 1em;
@@ -137,13 +132,18 @@
     stroke: white;
 }
 
-.btnContainer:hover {
+.btnContainer:disabled {
+    background-color: #979797;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.btnContainer:not(:disabled):hover {
     background-color: #5fb4a2;
 }
 
 .btnContainer:hover > svg:hover > .stroke {
     stroke: white;
-    /* background-color: red; */
 }
 
 .linkBtn {
@@ -191,7 +191,6 @@
     }
 
     .heroImage {
-        /* min-width: 688px; */
         min-height: 600px;
     }
     .heroImage {
@@ -203,7 +202,6 @@
         position: absolute;
         background-color: white;
         bottom: 0;
-        /* max-width: 514px; */
         min-width: 514px;
     }
 
@@ -243,9 +241,6 @@
 
 /* Desktop */
 @media (large) {
-    .main {
-        /* margin-top: 54px; */
-    }
     .heroImage {
         min-height: 600px;
         background-image: url("../public/images/homepage/desktop/image-homepage-hero.jpg");
@@ -282,9 +277,5 @@
 
     .author {
         align-self: auto;
-    }
-
-    .aboutBody {
-        /* margin-right: 0.3em; */
     }
 }
