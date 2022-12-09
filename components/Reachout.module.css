@@ -1,6 +1,3 @@
-@value breakpoints: "./Bpoints.module.css";
-@value small, medium, large from breakpoints;
-
 .linkBtn {
     display: inline-block;
     padding: 1.4166em 2.6666em;

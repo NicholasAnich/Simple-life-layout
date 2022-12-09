@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import clsx from "clsx";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import contact from "../styles/Contact.module.css";
 import { useFormValidator } from "../hooks/useFormValidator";
 
@@ -11,6 +11,16 @@ interface UserFormState {
     message: string;
 }
 
+interface FormError {
+    dirty: boolean;
+    error: boolean;
+    message: string;
+}
+
+type FormErrors = {
+    [key: string]: FormError;
+};
+
 export default function Contact() {
     const [form, setForm] = useState<UserFormState>({
         firstName: "",
@@ -18,11 +28,15 @@ export default function Contact() {
         message: "",
     });
 
-    const { firstName, email, message } = form;
     const { errors, validateForm, onBlurField } = useFormValidator(form);
 
     function handleChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
         const field: string = event.target.name;
+        const errors: FormErrors = {
+            firstName: { dirty: false, error: false, message: "" },
+            email: { dirty: false, error: false, message: "" },
+            message: { dirty: false, error: false, message: "" },
+        };
         const newForm = {
             ...form,
             [field]: event.target.value,
@@ -39,7 +53,7 @@ export default function Contact() {
 
     function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
         event.preventDefault();
-        const { isValid } = validateForm({ form, errors, forceTouchErrors: true });
+        const { isValid } = validateForm({ form, field: "", errors, forceTouchErrors: true });
         if (!isValid) {
             alert("Please fill out the required fields");
             return;

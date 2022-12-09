@@ -1,6 +1,3 @@
-@value breakpoints: "../components/Bpoints.module.css";
-@value small, medium, large from breakpoints;
-
 .main {
     min-height: 100%;
     margin-top: 16px;
@@ -165,9 +162,7 @@
     opacity: 1;
 }
 
-/* Mobile@2 */
-
-@media (small) {
+@media (min-width: 25em) {
     .heroImage {
         background-image: url("../public/images/homepage/mobile/image-homepage-hero@2x.jpg");
     }
@@ -181,10 +176,7 @@
     }
 }
 /* Tabelet */
-@media (medium) {
-    .main {
-        /* margin-top: 47px; */
-    }
+@media (min-width: 37.5em) {
     .heroSection {
         position: relative;
         margin-bottom: 96px;
@@ -240,7 +232,7 @@
 }
 
 /* Desktop */
-@media (large) {
+@media (min-width: 62.5em) {
     .heroImage {
         min-height: 600px;
         background-image: url("../public/images/homepage/desktop/image-homepage-hero.jpg");

@@ -2,7 +2,6 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Reachout from "../components/reachout";
-import { useState } from "react";
 
 interface User {
     firstName: string;
@@ -10,21 +9,7 @@ interface User {
     message: string;
 }
 
-interface AddMessage {
-    handleMessages: (user: User) => void;
-}
-
 export default function Home() {
-    const [userList, setUserList] = useState<User[]>([]);
-
-    const handleMessages = (user: User) => {
-        setUserList([user, ...userList]);
-    };
-
-    const functionProps = {
-        addMessage: handleMessages,
-    };
-
     return (
         <div className={styles.main}>
             <Head>

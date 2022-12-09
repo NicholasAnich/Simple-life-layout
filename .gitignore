@@ -52,3 +52,5 @@ next-env.d.ts
 .DS_Store
 README-template.md
 README.md
+
+.vercel
